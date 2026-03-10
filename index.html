@@ -2,82 +2,106 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=390, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wallpaper</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
 
-  html, body {
-    height: 844px;
-    overflow: hidden;
-    background: #000;
-  }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-  .page {
-    width: 390px;
-    height: 844px;
-    background: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 var(--offset, 0px);
-  }
+body{
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:'EB Garamond', Georgia, serif;
+}
 
-  .block {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    text-align: center;
-  }
+/* Exact iPhone 15 wallpaper canvas */
+.canvas{
+width:1179px;
+height:2556px;
+background:#000;
 
-  .term {
-    font-family: 'EB Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: 42px;
-    line-height: 1.25;
-    color: #e8c97e;
-    word-break: break-word;
-  }
+display:flex;
+align-items:center;
+justify-content:center;
+padding:200px;
 
-  .def {
-    font-family: 'EB Garamond', Georgia, serif;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #b0a8d0;
-    word-break: break-word;
-  }
+text-align:center;
+}
+
+/* Text block */
+
+.block{
+max-width:850px;
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.term{
+font-style:italic;
+font-size:120px;
+line-height:1.2;
+color:#e8c97e;
+}
+
+.def{
+font-size:54px;
+line-height:1.6;
+color:#b0a8d0;
+}
+
 </style>
 </head>
+
 <body>
-<div class="page" id="page">
-  <div class="block">
-    <div class="term" id="term"></div>
-    <div class="def" id="def"></div>
-  </div>
+
+<div class="canvas">
+<div class="block">
+<div class="term" id="term"></div>
+<div class="def" id="def"></div>
+</div>
 </div>
 
 <script>
-  const params = new URLSearchParams(location.search);
-  const offset = params.get('offset') || '0';
-  document.getElementById('page').style.padding = `0 0 0 ${offset}px`;
 
-  fetch('./words.json')
-    .then(r => r.json())
-    .then(entries => {
-      if (!entries || !entries.length) throw new Error('empty');
-      const entry = entries[new Date().getHours() % entries.length];
-      document.getElementById('term').textContent = entry.term;
-      document.getElementById('def').textContent  = entry.def;
-    })
-    .catch(() => {
-      document.getElementById('term').textContent = 'words.json';
-      document.getElementById('def').textContent  = 'File not found in repo root.';
-    });
+let entries=[];
+
+function updateWord(){
+
+if(!entries.length) return;
+
+/* change every 10 minutes */
+const slot=Math.floor(Date.now()/600000);
+const index=slot%entries.length;
+
+document.getElementById("term").textContent=entries[index].term;
+document.getElementById("def").textContent=entries[index].def;
+
+}
+
+fetch("./words.json")
+.then(r=>r.json())
+.then(data=>{
+entries=data;
+updateWord();
+})
+.catch(()=>{
+document.getElementById("term").textContent="words.json";
+document.getElementById("def").textContent="File not found";
+});
+
 </script>
+
 </body>
 </html>
