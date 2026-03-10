@@ -1,0 +1,1702 @@
+[
+  {
+    "term": "10Base-2",
+    "def": "specyfikacja instytutu IEEE dotycząca realizacji sieci Ethernet z wykorzystaniem cienkiego kabla koncentrycznego."
+  },
+  {
+    "term": "10Base-5",
+    "def": "specyfikacja instytutu IEEE dotycząca realizacji sieci Ethernet z wykorzystaniem grubego kabla koncentrycznego."
+  },
+  {
+    "term": "10Base-T",
+    "def": "specyfikacja instytutu IEEE dotycząca realizacji sieci Ethernet z wykorzystaniem nieekranowanej skrętki dwużyłowej."
+  },
+  {
+    "term": "3+Open",
+    "def": "rodzina produktów sieciowych firmy 3Com zbudowanych na podstawie serwera plików/druku LAN Manager. Obejmuje usługi połączeń, przesyłania komunikatów i zarządzania siecią."
+  },
+  {
+    "term": "3274/3276",
+    "def": "najczęściej używany kontroler klastrów. Urządzenie to może połączyć do trzydziestu dwóch terminali i drukarek typu 3270 z procesorem czołowym systemu mainframe."
+  },
+  {
+    "term": "802.X",
+    "def": "zestaw standardów opisujących okablowanie, topologie elektryczne i fizyczne oraz schematy dostępu dla produktów sieciowych, opracowany przez Komitet Instytutu Inżynierów Elektryków i Elektroników (patrz: IEEE – Institute of Electrical and Electronics Engineers). Innymi słowy standardy komitetu 802.X definiują warstwę fizyczną i warstwę łącza danych według modelu OSI. Standard IEEE 802.3 jest dziełem podgrupy komitetu 802 i opisuje okablowanie i sygnalizację dla systemu prawie identycznego z klasyczną siecią Ethernet. Z kolei standard IEEE 802.5 pochodzi od innej podgrupy i w podobny sposób opisuje architekturę sieci Token-Ring opracowaną przez IBM."
+  },
+  {
+    "term": "ACF (Advanced Communications Function)",
+    "def": "pakiet programów IBM pozwalający na współużytkowanie zasobów komputerowych przez łącza komunikacyjne. Obsługuje sieci SNA."
+  },
+  {
+    "term": "ACK",
+    "def": "znak sterujący potwierdzenia (z ang. acknowledgement). Taki znak jest wymieniany pomiędzy komponentami systemu, w przypadku odbioru danych bez błędu. Znak sterujący jest używany jako odpowiedź potwierdzająca przy nawiązywaniu komunikacji. ACK bywa również nazwą komunikatu zawierającego potwierdzenie."
+  },
+  {
+    "term": "Adapter terminala (terminal adapter – TA)",
+    "def": "telefon ISDN lub emulująca go karta do komputera PC. Urządzenia końcowe linii interfejsu podstawowego (Basic Rate Interface – BRA) nazywane są terminalami."
+  },
+  {
+    "term": "ADCCP (Advanced Data Communications Control Procedures)",
+    "def": "standard ANSI opisujący protokół komunikacji bitowej. Jest to protokół warstwy łącza danych według modelu OSI."
+  },
+  {
+    "term": "Adres (address)",
+    "def": "jednoznaczna lokalizacja w pamięci. Karty sieciowe i procesory często używają wspólnych adresów pamięci RAM w celu przekazania danych z każdej karty do procesora. Termin ten może także określać niepowtarzalny identyfikator węzła sieci."
+  },
+  {
+    "term": "Adres bazowy (base address)",
+    "def": "pierwszy z serii adresów pamięci, często używany do opisu początku obszaru wejścia-wyjścia karty sieciowej."
+  },
+  {
+    "term": "ADSL (assymetric digital subscriber line)",
+    "def": "asymetryczna cyfrowa linia abonencka. Oparta na skrętce dwużyłowej technologia modemowa, umożliwiająca osiągnięcie prędkości transmisji rzędu 8 Mb/s w kierunku z sieci do abonenta i do 1 Mb/s w kierunku od abonenta do sieci o zasięgu ok. 5,5 km. Patrz także: XDSL i G.Lite."
+  },
+  {
+    "term": "Advanced Communications Service",
+    "def": "duża sieć do przesyłania danych opracowana przez AT&T."
+  },
+  {
+    "term": "AFP (AppleTalk File Protocol)",
+    "def": "protokół sieciowy firmy Apple używany pomiędzy serwerami plików a klientami w sieciach AppleShare. Protokół AFP jest także używany przez firmę Novell w jej produktach dla komputerów Macintosh."
+  },
+  {
+    "term": "Alfanumeryczne znaki (alphanumeric)",
+    "def": "zbiór znaków składający się z liter i cyfr; nie obejmuje znaków graficznych tworzonych z pojedynczych pikseli przy emulacji terminala."
+  },
+  {
+    "term": "Algorytm windy (elevator seeking)",
+    "def": "metoda optymalizacji ruchu głowic dysków twardych serwera plików."
+  },
+  {
+    "term": "Analogowy (analog)",
+    "def": "termin odnoszący się najczęściej do metod transmisji opracowanych na potrzeby przesyłania głosu. Metody te zostały zaprojektowane dla pasma częstotliwości odpowiadającego ludzkiemu głosowi (do częstotliwości około 3 kHz). Z tego względu metody te mają ograniczone możliwości szybkiej transmisji sygnałów cyfrowych."
+  },
+  {
+    "term": "ANSI (American National Standards Institute)",
+    "def": "Amerykański Instytut Standardów Narodowych. Organizacja opracowująca i publikująca standardy schematów kodowania, alfabetów i sygnalizacji."
+  },
+  {
+    "term": "API (Application Programming Interface)",
+    "def": "interfejs programowy aplikacji. Zestaw standardowych przerwań programowych, wywołań i formatów danych używanych przez aplikacje do inicjowania kontaktu z usługami sieciowymi, programami obsługującymi komunikację z systemami mainframe lub do innej komunikacji pomiędzy programami."
+  },
+  {
+    "term": "APPC (Advanced Program-to-Program Communications)",
+    "def": "protokół IBM będący analogiem warstwy sesji według modelu OSI. Jego zadaniem jest zapewnienie parametrów niezbędnych do umożliwienia przesyłania siecią danych pomiędzy aplikacjami."
+  },
+  {
+    "term": "APPC/PC",
+    "def": "produkt IBM implementujący protokół APPC na komputerach PC."
+  },
+  {
+    "term": "AppleTalk",
+    "def": "system sieciowy firmy Apple, ktory umożliwia transmisję danych z prędkością 230 kB/s z wykorzystaniem dwużyłowej skrętki ekranowanej. Wyparty przez termin LocalTalk."
+  },
+  {
+    "term": "APPN (Advanced Peer-to-Peer Networking)",
+    "def": "uzupełnienie komunikacji SNA firmy IBM, które umożliwiają najbardziej wydajne zestawianie bezpośrednich połączeń komunikacyjnych pomiędzy użytkownikami sieci."
+  },
+  {
+    "term": "ARCnet (Attached Resources Comuting)",
+    "def": "architektura sieciowa (wprowadzona na rynek przez Datapoint Corporation i innych dostawców) wykorzystująca architekturę magistrali z przekazywaniem żetonu, zwykle budowana przy użyciu kabla koncentrycznego."
+  },
+  {
+    "term": "ARP (Address Resolution Protocol)",
+    "def": "protokół należący do pakietu protokołów TCP/IP, który odwzorowuje adresy IP na adresy sieci Ethernet. Żądanie adresu fizycznego dla danego adresu IP jest rozgłaszane w sieci przez protokół ARP. W odpowiedzi na nie, węzeł o podanym adresie IP wysyła swój adres sprzętowy, dzięki czemu mogą być do niego transmitowane pakiety. Odwrotny protokół ARP (Reverse ARP – RARP) jest używany przez bezdyskowe stacje robocze w celu uzyskania logicznego adresu IP."
+  },
+  {
+    "term": "ARPANET (Advanced Research Projects Agency Network)",
+    "def": "sieć zbudowana początkowo ze środków agencji DARPA (Defence Advanced Research Projects Agency) w celu połączenia uniwersytetów i rządowych centrów badawczych. W sieci ARPANET po raz pierwszy użyto protokołów TCP/IP."
+  },
+  {
+    "term": "ARQ",
+    "def": "kod sterujący, który jest używany przy żądaniu retransmisji bloku danych."
+  },
+  {
+    "term": "ASCII (American Standard Code for Information Interchange)",
+    "def": "standardowy amerykański kod wymiany informacji. Alfabet używany w pierwszych komputerach IBM PC, określający siedmiobitowe ciągi zerojedynkowe, przedstawiające poszczególne znaki (litery, cyfry i znaki specjalne)."
+  },
+  {
+    "term": "ASR (automatic send/receive)",
+    "def": "automatyczne wysyłanie-odbieranie. Termin pochodzący z dalekopisów, które zapisywały informacje w postaci dziurek na taśmie papierowej. Obecnie jest niekiedy używany do określenia urządzeń końcowych z możliwością zapisu danych."
+  },
+  {
+    "term": "Asynchroniczny (asynchronous)",
+    "def": "metoda transmisji, w której odstępy czasu pomiędzy znakami nie muszą być równe. W celu koordynacji transmisji do każdego znaku dodawane są bity startu i stopu."
+  },
+  {
+    "term": "Automatyczna identyfikacja numerów (ANI",
+    "def": "Automatic Number Identification)"
+  },
+  {
+    "term": "Awaria (fault)",
+    "def": "fizyczna lub logiczna przerwa w łączu komunikacyjnym."
+  },
+  {
+    "term": "Bajt (byte)",
+    "def": "grupa ośmiu bitów. Balun (BALanced UNbalanced – symetryczny/ niesymetryczny) urządzenie służące do dopasowania impedancji linii symetrycznych (na przykład skrętki dwużyłowej) i niesymetrycznych (na przykład kabla koncentrycznego)."
+  },
+  {
+    "term": "BBS (Bulletin Board System)",
+    "def": "elektroniczny system przekazywania komunikatów."
+  },
+  {
+    "term": "BCD (binary coded decima)",
+    "def": "sześciobitowy (sześciopoziomowy) schemat kodowania."
+  },
+  {
+    "term": "BIND (Berkley InternetName Domain)",
+    "def": "system nazw domen internetowych Berkley. Najpopularniejsza implementacja usług nazw domen DNS (Domain Name Service). Posługuje się ona następującym stylem adresowania nazwa_użytkownika@nazwa_domeny. Procesy DNS/BIND wiążą nazwy zrozumiałe dla ludzi z adresami IP. Termin bind (ang. wiązanie) jest również często używany w Windows i innych systemach operacyjnych do określenia stanu, w którym protokół jest „przywiązany” do karty lub do wyższej warstwy modelu OSI jako element większej całości."
+  },
+  {
+    "term": "Bindery",
+    "def": "baza danych utrzymywana w systemie operacyjnym Novell NetWare, w której przechowywane są dane o użytkownikach, serwerach i innych elementach sieci."
+  },
+  {
+    "term": "Bisynchroniczna komunikacja (bisynchronous communications)",
+    "def": "jeden z dwóch protokołów powszechnie używanych do kodowania danych przesyłanych pomiędzy urządzeniami w systemach komputerów mainframe firmy IBM. Oznaczany również skrótem BSC. Znaki danych są grupowane w pakietach zwanych ramkami, oznaczanych dwoma bitami synchronizacyjnymi (bisync). Bardziej współczesnym protokołem realizującym te zadania jest SDLC."
+  },
+  {
+    "term": "Bit",
+    "def": "najmniejsza jednostka informacji. W postaci cyfrowej może przybierać wartości zero lub jeden."
+  },
+  {
+    "term": "Bit startu (start bit)",
+    "def": "bit danych używany w transmisji asynchronicznej do zasygnalizowania początku znaku oraz tego, że kanał transmisyjny jest zajęty. Fizycznie jest to przerwa w sygnale o czasie trwania odpowiadającym jednemu bitowi."
+  },
+  {
+    "term": "Bit stopu (stop bit)",
+    "def": "bit danych używany w transmisji asynchronicznej do zasygnalizowania końca znaku i wskazujący na wolny kanał komunikacyjny. Fizycznie jest sygnał znacznika o czasie trwania odpowiadającym conajmniej długości jednego bitu."
+  },
+  {
+    "term": "Blok (block)",
+    "def": "grupa transmitowanych znaków."
+  },
+  {
+    "term": "Blokada pliku (file lock)",
+    "def": "patrz: blokowanie. Blokowanie (locking) metoda zabezpieczenia współużytkowanych danych. Kiedy program otwiera plik, blokada pliku uniemożliwia dostęp do tego pliku innym programom lub ogranicza ten dostęp do trybu tylko-do-odczytu."
+  },
+  {
+    "term": "Blokowanie rekordów (record locking)",
+    "def": "funkcja blokująca pozostałym użytkownikom dostęp (lub możliwość zapisu) do rekordów, z którymi pracuje już jeden użytkownik."
+  },
+  {
+    "term": "BNC",
+    "def": "patrz: Złącze BNC Bod (baud) jednostka prędkości transmisji; odwrotność czasu trwania transmisji najkrótszego elementu sygnału elektrycznego. W przypadku transmisji według standardu RS-232C ASCII, elementem sygnalizacyjnym jest 1 bit."
+  },
+  {
+    "term": "Bps (bits per second)",
+    "def": "bity na sekundę, b/s."
+  },
+  {
+    "term": "Brama (gateway)",
+    "def": "urządzenie będące współużytkowanym punktem wejścia z sieci lokalnej do innej sieci, na przykład do dużej sieci z komutacją pakietów lub do systemu mainframe."
+  },
+  {
+    "term": "Brouter",
+    "def": "urządzenie realizujące funkcje mostu (bridge) i routera. Broutery mogą wyznaczać trasy dla różnych protokołów, takich jak TCP/IP i XNS oraz pełnić role mostów dla pozostałego ruchu. Działają nieco inaczej niż mosty, routery czy bramy."
+  },
+  {
+    "term": "Bufor (buffer)",
+    "def": "pamięć tymczasowa. Odebrane dane mogą być przechowywane w buforze przed transmisją lub po niej. Buforów używa się do wyrównywania różnic pomiędzy prędkością transmisji a prędkością przetwarzania."
+  },
+  {
+    "term": "Bufor wydruku (print spooler)",
+    "def": "oprogramowanie przechowujące zadania wydruku przesłane do drukarki sieciowej, która jest w danej chwili zajęta. Każdy plik jest zapisywany tymczasowo w pamięci masowej, a następnie, gdy drukarka jest już wolna, kierowany do druku."
+  },
+  {
+    "term": "CCIT X.25(Zalecenia CCIT X.25)",
+    "def": "międzynarodowy standard definiujący protokoły komunikacji z komutacją pakietów dla sieci publicznych i prywatnych. Zalecenia CCIT X.25 zostały opracowane przez organizację o nazwie Comite Consultatif International Telgraphique et Telephonique (CCIT). Razem z innymi zaleceniami – zalecenia X.25 definiują protokoły warstwy fizycznej, łącza danych i sieciowej, niezbędne do połączenia sieci X.25. Zalecenia CCIT X.25 są przestrzegane przez większość dostawców sprzętu dla sieci X.25 i aktualizowane co cztery lata."
+  },
+  {
+    "term": "CCS7",
+    "def": "standard sygnalizacji sieciowej dla ISDN obejmujący przekazywanie dodatkowych informacji z baz danych w celu udostępnienia zaawansowanych usług sieciowych."
+  },
+  {
+    "term": "Centrala (central office – CO)",
+    "def": "system komutacji połączeń telefonicznych zlokalizowany w bezpośrednim sąsiedztwie lokali klientów. Obsługuje firmy i mieszkania podłączone do tzw. pętli lokalnej (loop line)."
+  },
+  {
+    "term": "Centrala zamiejscowa (foreign exchange)",
+    "def": "linia telefoniczna z numerem lokalnym w obszarze obsługiwanym przez inną centralę. W przypadku biura znajdującego się w strefie podmiejskiej, obsługującego klientów z obszaru miasta, linia do centrali zamiejscowej umożliwia dodzwonienie się do biura na miejski numer telefonu."
+  },
+  {
+    "term": "CHAP/PAP (Chalenge Handshake and Authentication Protocol/Password Authentication Protocol)",
+    "def": "protokół wezwania, uzgodnienia i uwierzytelnienia. Protokół uwierzytelniania hasła. Standardowe protokoły uwierzytelnień używane w połączeniach PPP."
+  },
+  {
+    "term": "CICS (Customer Information Control System)",
+    "def": "system kontroli informacji o kliencie. Oprogramowanie IBM działające w systemach mainframe i udostępniające aplikacjom wiele różnorodnych usług. Należą do nich możliwości dostępu do plików przechowywanych w systemie mainframe i wyszukiwania danych w tych plikach."
+  },
+  {
+    "term": "Cienki Ethernet (Thin Ethernet)",
+    "def": "system okablowania wykorzystujący cienki i elastyczny kabel koncentryczny do szeregowego łączenia węzłów sieci."
+  },
+  {
+    "term": "CIFS (Common Internet File System)",
+    "def": "powszechny internetowy system plików. Rozproszony system plików i drukarek sieciowych używany w sieciach Microsoft, a szczególnie w sieciach Windows NT/Windows 95 z protokołem TCP/IP i nowszych. W odróżnieniu od systemu NFS (patrz: NFS) ten system plików (dawniej nazywany SMB) zachował możliwość realizacji pełnego zestawu funkcji klient-serwer sieciowego systemu operacyjnego również w Internecie, a w tym kolejki wydruków, blokadę plików i funkcje administracyjne."
+  },
+  {
+    "term": "CLEC (Competitive Local Exchange Carrier)",
+    "def": "konkurencyjny lokalny operator sieci telefonicznej. Firma telekomunikacyjna, która konkuruje na danym rynku z głównym lokalnym operatorem sieci telefonicznej (patrz: ILEC). Firma może być kwalifikowana jako operator CLEC na jednym rynku i jako operator ILEC na innym."
+  },
+  {
+    "term": "CMOT (CMIP over TCP/IP)",
+    "def": "standard internetowy definiujący wykorzystanie protokołu CMIP do zarządzania sieciami TCP/IP."
+  },
+  {
+    "term": "CMPIP (Common Management Information Protocol)",
+    "def": "protokół oparty na modelu OSI, opisujący formatowanie komunikatów i ich transmisję pomiędzy programami zbierającymi informację a urządzeniami powiadamiającymi. Został on opracowany przez Międzynarodową Organizację Normalizacyjną (International Standards Organization) i oznaczony ISO 9596."
+  },
+  {
+    "term": "COW",
+    "def": "patrz: Interfejs COW CPE"
+  },
+  {
+    "term": "­patrz: Wyposażenie klienta",
+    "def": "Cps (characters per second) znaki na sekundę."
+  },
+  {
+    "term": "CPU (Central Procesor Unit)",
+    "def": "jednostka centralna, procesor główny. Funkcjonalny „mózg” komputera; element, który faktycznie realizuje operacje dodawania i odejmowania jedynek i zer, zasadnicze dla działania komputera."
+  },
+  {
+    "term": "CRC (Cyclic Redundancy Check)",
+    "def": "cykliczna kontrola redundancji. Wartość liczbowa obliczana na podstawie poszczególnych bitów w wiadomości. Stacja transmisyjna używa jednego z kilku sposobów, aby wyliczyć tę wartość i dołączyć ją do przesyłanej wiadomości. Stacja odbierająca używa tego samego wzoru i sprawdza, czy wartość CRC nie zmieniła się. Jeśli wartości te są różne, deklarowany jest błąd transmisji."
+  },
+  {
+    "term": "CRT (Cathode Ray Tube)",
+    "def": "lampa katodowa. Ekran monitora i telewizora."
+  },
+  {
+    "term": "CSMA (Carrier Sense Multiple Access)",
+    "def": "wspólny dostęp z wykrywaniem nośnej. Procedura współużytkowania nośnika sieci, w której stacje nasłuchują tego, co dzieje się w nośniku; jeśli kabel nie jest używany, stacja może przystąpić do transmisji wiadomości. Metoda CSMA jest często uzupełniana o funkcje detekcji kolizji (collision detection), co oznacza się skrótem CSMA/CD."
+  },
+  {
+    "term": "Cyfrowy (digital)",
+    "def": "określenie powszechnie stosowane do sygnalizacji typu włączone-wyłączone; sygnały cyfrowe składają się z ciągów zer i jedynek w przeciwieństwie do sygnałów analogowych, składających się z wielu różnych wartości."
+  },
+  {
+    "term": "Czas oczekiwania (latency)",
+    "def": "jeśli system komunikacyjny wprowadza znaczne opóźnienie przy transmisji pakietów, mówi się, że ma on długi czas oczekiwania. Długi czas oczekiwania jest szczególnie niekorzystny w przypadku procesów transakcji, dla których informacje są kilkakrotnie przesyłane tam i z powrotem. Protokół TCP/IP został zaprojektowany tak, aby zminimalizować efekt czasu oczekiwania w transmisji strumienia danych, na przykład dźwięku lub wideo."
+  },
+  {
+    "term": "Czas propagacji (propagation delay)",
+    "def": "czas pomiędzy wejściem sygnału do kanału i odebraniem go na drugim końcu kanału. W sieciach lokalnych jest zazwyczaj niewielki i pozwala się pominąć, jednak staje się istotnym czynnikiem w komunikacji satelitarnej."
+  },
+  {
+    "term": "DAP (Data Access Protocol)",
+    "def": "specjalny protokół używany w Digital Equipment Corporation."
+  },
+  {
+    "term": "DAT (Digital Audio Tape)",
+    "def": "cyfrowa taśma audio. Technologia zapisu taśmowego przeznaczona do nagrywania dźwięku o bardzo wysokiej jakości oraz do archiwizacji danych. Kasety DAT wyglądają jak zwykłe kasety audio i często są używane w automatycznych stacjach taśm. Podstawowa kaseta DAT ma pojemność 2 GB, jednak współczesne systemy DAT mają dużo większe pojemności."
+  },
+  {
+    "term": "Datagram",
+    "def": "pakiet wygenerowanych przez komputer informacji, zawierający przynajmniej adresy komputerów – źródłowego i docelowego, biorących udział w transmisji. W protokołach – jak TCP/IP – datagramy są często zintegrowane z wyższymi warstwami protokołów, co zapewnia kompletną transmisję."
+  },
+  {
+    "term": "DB-25",
+    "def": "standardowe gniazdko i wtyczka używane w interfejsie RS-232C; złącza 25-stykowe (dwanaście styków w jednej linii, trzynaście w drugiej)."
+  },
+  {
+    "term": "DCE (data communications equipment)",
+    "def": "sprzęt do transmisji danych. Określenie odnoszące się do dowolnego elementu sieci X.25 zgodnego ze standardem CCIT X.25."
+  },
+  {
+    "term": "DDCMP (Digital Data Communications Message Protocol)",
+    "def": "protokół komunikatów przy transmisji danych. Bajtowy protokół warstwy łącza opracowany przez Digital Equipment Corporation, używany do transmisji komunikatów poprzez linie komunikacyjne."
+  },
+  {
+    "term": "DDD (direct distance dialing)",
+    "def": "bezpośrednie wybieranie numerów międzymiastowych. Powszechny system telefonii międzymiastowej."
+  },
+  {
+    "term": "DECnet",
+    "def": "protokół komunikacyjny oraz linia produktów sieciowych firmy Digital Equipment Corporation, zgodnych ze standardem Ethernet i wieloma innymi systemami."
+  },
+  {
+    "term": "Demodulacja (demodulation)",
+    "def": "proces odczytywania danych na podstawie zmodulowanej fali nośnej; odwrotność modulacji."
+  },
+  {
+    "term": "DHCP (Dynamic Host Configuration Protocol)",
+    "def": "protokół dynamicznej konfiguracji hosta. Protokół automatycznej konfiguracji paramatetrów TCP/IP, umożliwiający dynamiczne przydzielanie adresów i zarządzanie nimi."
+  },
+  {
+    "term": "DISOSS (Distributed Office Supported System)",
+    "def": "rozproszony system obsługi biura. Zintegrowany pakiet programu poczty elektronicznej i programów do tworzenia dokumentów opracowany przez IBM na potrzeby systemów mainframe."
+  },
+  {
+    "term": "DLTA (Digital Linear Tape)",
+    "def": "cyfrowa taśma liniowa. Technologia zapisu na taśmie magnetycznej opracowana przez Digital Equipment Corporation, a sprzedawana obecnie przez Quantum. Kasety DLT mają pojemność od 10 do 35 GB."
+  },
+  {
+    "term": "DMI (Desktop Management Interface)",
+    "def": "interfejs zarządzania pulpitem. Specyfikacja grupy Desktop Management Task Force, która umożliwia monitorowanie komponentów systemowych wewnątrz peceta do celów zarządzania."
+  },
+  {
+    "term": "DNS (Domain Name System)",
+    "def": "system nazw domenowych. Jest to system realizowanych przez dedykowane serwery usług, wiążących przyjazne dla użytkownika nazwy (tworzone według określonej struktury) z adresami IP. W Internecie, a także w  intranetach hierarchie serwerów DNS utrzymują wewnętrzne bazy danych, na podstawie których dokonują translacji nazw domenowych na adresy IP na żądanie stacji klienckich."
+  },
+  {
+    "term": "DOCSIS (Data Over Cable Service Interface Specification)",
+    "def": "specyfikacja interfejsu usług transmisji danych w sieci telewizji kablowej. Względnie nowy standard branżowy, który definiuje metodę komunikacji modemów kablowych w sieciach telewizji kablowej. Każdy modem zgodny ze specyfikacją DOCSIS będzie współdziałał z siecią telewizji kablowej, która jest również zgodna z tą specyfikacją."
+  },
+  {
+    "term": "Dostęp pierwotny (primary rate interface – PRI)",
+    "def": "w sieciach ISDN specyfikacja interfejsu po obu stronach pojemnego kanału łączącego centralę firmową z centralą operatora lub kanału pomiędzy przełącznikami (systemami komutacyjnymi). Dostęp pierwotny obejmuje 23 kanały B (kanały „nośnika”), o przepustowości 64 kb/s każdy, a także kanał D (kanał „danych”), również o przepustowości 64 kb/s. Łączna przepustowość interfejsu wynosi 1,544 Mb/s, co odpowiada kanałowi typu T1."
+  },
+  {
+    "term": "Dostęp podstawowy (BRI (Basic Rate Interface – BRI)",
+    "def": "interfejs dostępu podstawowego. Standard sieci ISDN opisujący metodę połączenia się terminala użytkownika z centralą ISDN. Obejmuje on dwa kanały B, umożliwiające równoczesną transmisję danych i głosu z prędkością 64 kb/s, oraz kanał D używany do przesyłania informacji o połączeniu i o użytkowniku z prędkością 16 kb/s."
+  },
+  {
+    "term": "DQDB (Distributed Queue Dual Bus)",
+    "def": "podwójna magistrala rozproszonych kolejek. Standard 802.6 zaproponowany przez IEEE dla sieci metropolitalnych (Metropolitan Area Network – MAN)."
+  },
+  {
+    "term": "Drzewo (tree)",
+    "def": "termin odnoszący się do organizacji sieci, w której stacje są podłączane do wspólnej linii lub do magistrali danych."
+  },
+  {
+    "term": "DSA (Distributed Systems Architecture)",
+    "def": "architektura systemów rozproszonych. Opracowana przez firmę Honeywell architektura zgodna z modelem Open Systems Interconnection zaproponowanym przez ISO. Obsługuje ona komutację pakietów według X.25 oraz protokoły sieciowe z komutacją pakietów i komutacją obwodów według X.21."
+  },
+  {
+    "term": "DSL (digital subscriber line",
+    "def": "cyfrowa linia abonencka)"
+  },
+  {
+    "term": "DTE (data terminal equipment)",
+    "def": "terminal danych. Jest to dowolne urządzenie końcowe, które może pracować w sieci X.25 zgodnie ze standardami CCIT X.25, LAP/LAB i X.25 PAP."
+  },
+  {
+    "term": "Dublowanie dysków (disk duplexing)",
+    "def": "odporna na awarie technika zapisu danych, w której dane zapisywane są równocześnie na dwóch dyskach przy użyciu dwóch różnych sterowników."
+  },
+  {
+    "term": "Dupleks (duplex)",
+    "def": "1. w obwodach komunikacyjnych cecha umożliwiająca jednoczesne odbieranie i nadawanie danych, tak zwany pełny dupleks (full duplex). Obwody półdupleksowe (half-duplex) mogą w danej chwili tylko nadawać lub tylko odbierać; 2. w przypadku terminali możliwość wyboru pomiędzy wyświetlaniem znaków wprowadzanych lokalnie lub znaków odbitych."
+  },
+  {
+    "term": "EBCDIC (Extended Binary Coded Decimal Interchange Code)",
+    "def": "rozszerzony kod znakowy. Alfabet danych używany we wszystkich komputerach produkowanych przez IBM, z wyjątkiem komputerów osobistych. Przedstawia każdy znak (literę, cyfrę lub znak specjalny) w postaci ośmiobitowego ciągu zer i jedynek."
+  },
+  {
+    "term": "Echoplex",
+    "def": "metoda transmisji, w której na terminalu nadawcy wyświetlane są wysłane przez niego znaki odbite od drugiego końca łącza komunikacyjnego. W ten sposób użytkownik może bezpośrednio kontrolować obwód komunikacyjny."
+  },
+  {
+    "term": "ECMA (European Computer Manufacturers Association)",
+    "def": "Europejskie Stowarzyszenie Producentów Komputerów. Stowarzyszenie handlowe mające wpływ na pracę międzynarodowych organizacji standaryzacyjnych."
+  },
+  {
+    "term": "EDI (Electronic Data Interchange)",
+    "def": "elektroniczna wymiana danych. Standardy transmisji dokumentów w formie elektronicznej pomiędzy firmami i organizacjami. Dokumentami tymi mogą być: zlecenia, faktury, przelewy oraz dokumenty dla różnych transakcji handlowych."
+  },
+  {
+    "term": "EIA (Electronic Industry Association)",
+    "def": "organizacja zrzeszająca producentów części i sprzętu elektronicznego z USA. Zajmuje się ona opracowywaniem branżowych standardów dla interfejsów pomiędzy sprzętem przetwarzającym dane a sprzętem komunikacyjnym."
+  },
+  {
+    "term": "EISA (Extended Industry Standard Architecture)",
+    "def": "rozszerzona architektura standardowa. System magistrali w komputerze PC, który stanowi alternatywę dla opracowanej przez IBM architektury Micro Channel Architecture (MCA). Architektura EISA, popierana przez konsorcjum firm na czele z Compaqiem, jest zgodna z magistralą AT, podczas gdy architektura MCA – nie."
+  },
+  {
+    "term": "Eliminator modemu (modem eliminator)",
+    "def": "urządzenie przewodowe umożliwiające zastąpienie dwóch modemów; pozwala ono połączyć sprzęt na odległość do kilkuset metrów. W systemach asynchronicznych jest to po prostu kabel."
+  },
+  {
+    "term": "EMA (Enterprise Management Architecure)",
+    "def": "firmowa architektura zarządzania. Opracowana przez Digital Equipment Corporation architektura zgodna ze standardem ISO CMIP."
+  },
+  {
+    "term": "Emulacja (emulation)",
+    "def": "programowa symulacja funkcji systemu."
+  },
+  {
+    "term": "Ethernet",
+    "def": "standard okablowania sieciowego i protokołów dostępu opracowany pierwotnie przez firmę Xerox. Obecnie dominujący standard sieci LAN."
+  },
+  {
+    "term": "EtherTalk",
+    "def": "1. karta sieci Ethernet firmy Apple dla komputera Macintosh II; 2. sterownik programowy używany w komputerach Macintosh do komunikacji z kartami sieci Ethernet."
+  },
+  {
+    "term": "FDDI (Fiber Distributed Data Interface)",
+    "def": "złącze danych w sieciach optycznych dużej przepustowości. Specyfikacja sieci optycznych działających z przepustowością 100 Mb/s. W technologii FDDI wykorzystuje się koncentratory, które są głównymi urządzeniami do monitorowania sieci i sterowania nią."
+  },
+  {
+    "term": "FEP (front-end processor)",
+    "def": "procesor czołowy. Komputer znajdujący się pomiędzy grupą kontrolerów klastrów i systemem mainframe, którego zadaniem jest koncentrowanie sygnałów przesyłanych do systemu mainframe."
+  },
+  {
+    "term": "Filtr pakietów (packet filter)",
+    "def": "funkcja mostu polegająca na porównywaniu każdego odebranego pakietu ze specyfikacją podaną przez administratora sieci. Jeśli pakiet jest zgodny z tą specyfikacją, most może go przekazać dalej albo odrzucić."
+  },
+  {
+    "term": "FSK",
+    "def": "patrz: Kluczowanie z przesuwem częstotliwości"
+  },
+  {
+    "term": "FTAM (File Transfer Access and Management)",
+    "def": "protokół modelu OSI umożliwiający dostęp do plików znajdujących się w różnych systemach."
+  },
+  {
+    "term": "FTP (File Transfer Protocol)",
+    "def": "protokół transferu plików. Protokół opisujący, w jaki sposób jeden komputer (serwer) ma obsługiwać inne komputery, aby umożliwić transmisję plików w dowolnym kierunku. Użytkownicy mają dostęp do katalogów na serwerze i ograniczonego zestawu operacji na plikach. Oprogramowanie klienta FTP jest zwykle częścią pakietu TCP/IP dla komputerów PC; niektórzy producenci udostępniają również oprogramowania serwera FTP dla PC-tów. Patrz: TFTP."
+  },
+  {
+    "term": "G.Lite",
+    "def": "standard ITU dla technologii DSL charakteryzujący się przepływnością do 1,5 Mb/s. Oczekuje się, że G.Lite stanie się głównym standardem usług DSL na potrzeby użytkowników indywidualnych i małych firm."
+  },
+  {
+    "term": "Gigabit Ethernet (1 000Base-T)",
+    "def": "rozszerzenie standardu 100Base-T sieci Ethernet charakteryzujące się prędkościami transmisji 1000 Mb/s czyli 1 Gb/s."
+  },
+  {
+    "term": "GOSIP (Government OSI Profile)",
+    "def": "wersja protokołów modelu OSI opracowana na potrzeby rządu USA. Zgodność z protokołami GOSIP jest zwykle podstawowym kryterium przy zakupie sprzętu na potrzeby instytucji państwowej."
+  },
+  {
+    "term": "Gruby Ethernet (Thick Ethernet)",
+    "def": "system okablowania wykorzystujący względnie sztywny kabel koncentryczny o dużej średnicy łączący urządzenia nadawczo-odbiorcze (patrz: transceivers). Urządzenia nadawczo-odbiorcze są podłączane do węzłów sieci giętkimi przewodami wielożyłowymi."
+  },
+  {
+    "term": "HDLC (High Level Data Link Control)",
+    "def": "wszechstronny standard opracowany przez ISO. Opisuje zorientowany bitowo protokół warstwy łącza danych."
+  },
+  {
+    "term": "HLLAPI (High Level Language Application Program Interfejs)",
+    "def": "język skryptowy (to znaczy zbiór czasowników) umożliwiający programistom tworzenie przezroczystych interfejsów pomiędzy terminalami 3270 i aplikacjami w systemach mainframe IBM."
+  },
+  {
+    "term": "HotFix",
+    "def": "program firmy Novell dynamicznie oznaczający uszkodzone bloki na dysku twardym w celu wyłączenia ich z użytkowania."
+  },
+  {
+    "term": "HSM (Hierarchical Storage Management)",
+    "def": "system sprzętu i oprogramowania, który zajmuje się przenoszeniem plików z dysków na wolniejsze, tańsze nośniki, kierując się obserwacjami użycia pliku."
+  },
+  {
+    "term": "Hz (Hertz)",
+    "def": "herc; jednostka częstotliwości odpowiadająca 1 cyklowi na sekundę."
+  },
+  {
+    "term": "IAB (Internet Architekture Board)",
+    "def": "Komisja ds. Architektury Internetu. Organ opracowujący wytyczne rozwoju infrastruktury Internetu. Składa się z dwóch zespołów zadaniowych: IETF (Internet Engineering Task Force) i IRTF (Internet Research Task Force)."
+  },
+  {
+    "term": "ICMP (Internet Control Message Protocol)",
+    "def": "protokół TCP/IP opisujący zestaw funkcji używanych do zarządzania i sterowania warstwą sieci według modelu OSI."
+  },
+  {
+    "term": "IEEE 802",
+    "def": "wielka rodzina standardów opisujących fizyczne i elektryczne połączenia w sieciach lokalnych."
+  },
+  {
+    "term": "IEEE 802.",
+    "def": "standard IEEE dla sieci metropolitalnych, opisujący topologię DQDB (Distributed Queue Dual Bus). W topologii tej używa się dwóch równoległych kabli – zazwyczaj światłowodowych – łączących wszystkie węzły sieci (najczęściej routery dla segmentów sieci LAN) i umożliwiających transmisję z prędkością do 100 Mb/s."
+  },
+  {
+    "term": "IEEE 802.1D",
+    "def": "standard IEEE opisujący poziom sterowania dostępem do nośnika dla wewnętrznych mostów sieci LAN, łączących sieci zgodne ze standardami IEEE 802.2, 802.4 i 802.5."
+  },
+  {
+    "term": "IEEE 802.2",
+    "def": "standard IEEE dla oprogramowania i oprogramowania wbudowanego (firmware) warstwy łącza danych używanego w sieciach zgodnych ze standardami IEEE 802.3, 802.4 i 802.5."
+  },
+  {
+    "term": "IEEE 802.3 10Base-2",
+    "def": "specyfikacja IEEE odpowiadająca sieci zbudowanej na cienkim ethernecie. Sieć taka charakteryzuje się prędkością transmisji 100 Mb/s, technikami sygnalizacji w paśmie podstawowym oraz maksymalną długością segmentu sieci wynoszącą 185 m."
+  },
+  {
+    "term": "IEEE 802.3 10Base-T",
+    "def": "standard IEEE odpowiadający sieci Ethernet zbudowanej na bazie skrętki dwużyłowej, wykorzystującej sygnalizację w paśmie podstawowym. W takiej sieci niezbędny jest koncentrator."
+  },
+  {
+    "term": "IEEE 802.3 10Broad36",
+    "def": "specyfikacja IEEE opisująca okablowanie sieci Ethernet dalekiego zasięgu o prędkości transmisji 10 Mb/s, szerokopasmowymi technikami sygnalizacji i maksymalną długością segmentu sieci wynoszącą 3 600 m."
+  },
+  {
+    "term": "IEEE 802.3 1Base5",
+    "def": "specyfikacja IEEE opisująca starszy produkt StarLAN firmy AT&T. Sieć ta charakteryzuje się prędkością transmisji 1 Mb/s, technikami sygnalizacji w paśmie podstawowym oraz maksymalną długością segmentu sieci wynoszącą 500 m."
+  },
+  {
+    "term": "IEEE 802.4",
+    "def": "ta specyfikacja IEEE opisuje sieć lokalną ze sterowaniem dostępem do nośnika na podstawie przekazywania żetonu i topologią magistrali. Sieć taka jest zwykle używana jako element sieci z protokołem MAP (Manufacturing Automation Protocol) opracowanym przez General Motors. Niekiedy sieć 802.4 jest mylnie utożsamiana z siecią ARCnet."
+  },
+  {
+    "term": "IEEE 802.5",
+    "def": "specyfikacja IEEE opisująca sieć LAN o prędkości transmisji 4 lub 16 Mb/s, wykorzystującą sterowanie dostępem do nośnika poprzez przekazywanie żetonu i topologię pierścienia. Używana jest w systemach Token-Ring firmy IBM."
+  },
+  {
+    "term": "IETF (Internet Engineering Task Force)",
+    "def": "jedna z dwóch technicznych grup roboczych przy komisji IAB, zajmująca się opracowywaniem i ewolucją standardów dla Internetu."
+  },
+  {
+    "term": "IGRP (Internet Gateway Routing Protocol)",
+    "def": "protokół routingu na podstawie wektora odległości opracowany przez Cisco Systems na potrzeby dużych sieci heterogenicznych."
+  },
+  {
+    "term": "ILEC (Incumbent Local Exchange Carrier)",
+    "def": "główny lokalny operator sieci telefonicznej. Nazywany również RBOC (Regional Bell Operating Company – Regionalny Oddział Operacyjny Firmy Bell)."
+  },
+  {
+    "term": "IMAP4 (Internet Message Access Protocol, wersja 4)",
+    "def": "ewoluujący protokół aplikacyjny, który udostępnia klientom wiadomości poczty elektronicznej na serwerze i umożliwia manipulowanie nimi. Mając większe możliwości niż protokół POP3, protokół IMAP4 pozwala klientom spoza sieci na aktualizację skrzynek pocztowych z serwerem."
+  },
+  {
+    "term": "Impedancja (impedance)",
+    "def": "wielkość elektryczna charakteryzująca kabel. Jest to wypadkowa rezystancji, reaktancji pojemnościowej i indukcyjności. Mierzona w omach."
+  },
+  {
+    "term": "Interfejs (interface)",
+    "def": "punkt połączenia, zwykle pomiędzy elementami sprzętowymi."
+  },
+  {
+    "term": "Interfejs COW (Character Oriented Windows interface)",
+    "def": "znakowy interfejs dla Windows. Zgodny z SSA interfejs użytkownika dla aplikacji systemu OS/2."
+  },
+  {
+    "term": "Interfejs T (T interface)",
+    "def": "standardowy interfejs dostępu podstawowego używający czterożyłowego przewodu miedzianego."
+  },
+  {
+    "term": "Interfejs U (U interface)",
+    "def": "standardowy interfejs dostępu podstawowego ISDN, wykorzystujący dwa przewody miedziane."
+  },
+  {
+    "term": "Internet",
+    "def": "zbiór sieci i bram obejmujący sieci ARPAnet, MILnet i NSFnet (National Science Foundation – Krajowa Fundacja Nauki). Internet korzysta z protokołów TCP/IP."
+  },
+  {
+    "term": "Intranet",
+    "def": "sieć używająca protokołu IP stworzona na potrzeby organizacji i jej kontrahentów. Często obejmuje serwery WWW, poczty elektronicznej i inne usługi dostępne zwykle w Internecie. Od Internetu różni się jednak ograniczonym dostępem do kanałów komunikacyjnych."
+  },
+  {
+    "term": "IP (Internet Protocol)",
+    "def": "standard opisujący oprogramowanie, śledzące adresy internetowe różnych węzłów, kierujące wiadomości wychodzące i rozpoznające wiadomości przychodzące."
+  },
+  {
+    "term": "IPX (Internet Packet Exchange)",
+    "def": "rodzimy protokół sieci lokalnych NetWare, używany do przesyłania danych pomiędzy serwerami i stacjami roboczymi działającymi w różnych węzłach sieci. Pakiety IPX są kapsułkowane i przenoszone w pakietach sieci Ethernet lub w podobnych ramkach uzywanych w sieciach Token-Ring."
+  },
+  {
+    "term": "IRQ (interrupt request)",
+    "def": "żądanie przerwania. Instrukcja komputerowa powodująca przerwanie działania programu w celu wykonania operacji wejścia-wyjścia."
+  },
+  {
+    "term": "ISDN (Integrated Services Digital Network)",
+    "def": "sieć cyfrowa z integracją usług. Jak to oficjalnie definiuje CCITT „ograniczony zestaw standardowych interfejsów do cyfrowej sieci komunikacyjnej”. Oferuje użytkownikom usługi telefoniczne, możliwość transmisji danych i wideokonferencji świadczone poprzez cyfrowe obwody typu end-to-end (od nadawcy do odbiorcy)."
+  },
+  {
+    "term": "ISO (International Standards Organization)",
+    "def": "Międzynarodowa Organizacja Normalizacyjna. Organizacja tworząca standardy techniczne, która między innymi opracowała model Współdziałania systemów otwartych (patrz: – OSI)."
+  },
+  {
+    "term": "ISP (Internet Service Provider)",
+    "def": "usługodawca internetowy. Firma posiadająca szerokopasmowy dostęp do Internetu, która wydziela mniejsze (wolniejsze) pasma i oferuje je swoim klientom; użytkownikom indywidualnym i organizacjom. Ponadto usługodawcy internetowi świadczą zwykle wiele innych usług, np. WWW"
+  },
+  {
+    "term": "Jądro (kernel)",
+    "def": "punkt centralny systemu operacyjnego, zawierający podstawowe funkcje szeregujące i obsługę przerwań, ale już nie obejmujący usług wyższego poziomu, takich jak system plików."
+  },
+  {
+    "term": "Język zapytań (query language)",
+    "def": "język programowania opracowany w celu ułatwienia użytkownikom uzyskiwania informacji z baz danych."
+  },
+  {
+    "term": "Kabel kategorii 3 (Type 3 cable)",
+    "def": "nieekranowana skrętka spełniająca wymagania IBM dla transmisji w sieciach Token-Ring z prędkością 4 Mb/s."
+  },
+  {
+    "term": "Kanał (channel)",
+    "def": "ścieżka pomiędzy nadawcą a odbiorcą przenosząca pojedynczy strumień informacji (ścieżka dwukierunkowa nazywa się obwodem)."
+  },
+  {
+    "term": "Kanał D (D-channel)",
+    "def": "kanał „danych” interfejsu ISDN używany do przenoszenia sygnałów sterujących i danych połączenia klienta w trybie komutacji pakietów. W interfejsie dla dostępu podstawowego (BRI) kanał D działa z prędkością 16 kb/s, a dla dostępu pierwotnego (PRI) z prędkością 64 kb/s."
+  },
+  {
+    "term": "Kanał głosowy (voice channel)",
+    "def": "kanał transmisyjny ograniczony zwykle do pasma częstotliwości odpowiadającego głosowi (3 kHz)."
+  },
+  {
+    "term": "Kanał światłowodowy (fibre channel)",
+    "def": "standard transmisji określający techniki sygnalizacji i obsługi danych dla różnych nośników (w tym kabli koncentrycznych i światłowodów) z prędkościami do 1 Gb/s. Standard zapewnia wysoką niezawodność połączeń i pewną dostawę danych. Połączenia, które wykorzystują kanały światłowodowe, mogą przenosić połączenia według innych standardów (na przykład SCSI). kanał zwrotny (reverse channel) kanał zwrotnego przesyłania odpowiedzi pracujący w trybie półdupleksu. Umożliwia on przesłanie potwierdzenia przez modem odbiorczy do modemu nadawczego bez przerywania trybu półdupleksu. Kanał ten jest również wykorzystywany do kontroli połączenia między modemami."
+  },
+  {
+    "term": "Kanał-B (B-channel)",
+    "def": "kanał „nośnika” (ang. bearer) służący do przesyłania głosu i danych z prędkością 64 kb/s w każdym kierunku, zestawiany techniką komutacji obwodów. kB (kilobajt)"
+  },
+  {
+    "term": "1024 bajty (8192 bity).",
+    "def": "Kerberos system uwierzytelniania opracowany w Massachusetts Institute of Technology, używający symetrycznego klucza szyfrującego, który zapewnia pewne uwierzytelnienie i bezpieczne połączenie. Windows NT 5 wykorzystuje system zabezpieczeń Kerberos zamiast używanego wcześniej systemu NTLM (ale wciąż obsługuje NTLM dla zapewnienia zgodności z poprzednimi wersjami)."
+  },
+  {
+    "term": "Klient-serwer (client/serwer)",
+    "def": "system komputerowy, w którym przetwarzanie może być rozproszone w sieci pomiędzy „klientami”, żądającymi informacji, i przynajmniej jednym „serwerem”, który przechowuje dane, pomaga klientom współużytkować dane i programy, drukować w sieci, itp. Taki system może być dostosowany do aplikacji autonomicznych (np. edytorów tekstu), aplikacji pobierających dane z serwera (arkusze kalkulacyjne), aplikacji wykorzystujących możliwości serwera do wymiany informacji (poczta elektroniczna) i aplikacji umożliwiających prawdziwą pracę zespołową w trybie klient-serwer (bazy danych, szczególnie oparte na strukturalnym języku zapytań SQL – Structured Query Language)."
+  },
+  {
+    "term": "Kluczowanie z przesuwem częstotliwości (frequency shift keying – FSK)",
+    "def": "metoda transmisji używana w popularnych modemach, w której przesunięciu dwóch sygnałów o różnych częstotliwościach odpowiadają zera i jedynki."
+  },
+  {
+    "term": "Kodek (codec, coder/decoder)",
+    "def": "układ kodująco-dekodujący, który przekształca analogowe sygnały głosowe w strumień cyfrowy (koder) i strumień cyfrowy w sygnał analogowy (dekoder), wykorzystując metodę modulacji impulsowo-kodowej."
+  },
+  {
+    "term": "Kolejka (queue)",
+    "def": "lista pozycji oczekujących w systemie na usługę. Przykładem może być kolejka wydruków, dokumentów, które mają być wydrukowane na sieciowym serwerze wydruku."
+  },
+  {
+    "term": "Kolizja (collision)",
+    "def": "jednoczesna próba wysłania tym samym kanałem komunikatu z dwóch jednostek. W niektórych sieciach wykrycie kolizji powoduje wstrzymanie wszystkich procesów nadawania, podczas gdy w innych kolizja jest zauważana dopiero wtedy, gdy stacja odbierająca nie potwierdzi odbioru danych."
+  },
+  {
+    "term": "Komunikacja świetlna (light wave communications)",
+    "def": "metoda komunikacji wykorzystująca światłowody i impulsy świetlne generowane przez lasery lub diody elektroluminescencyjne (LED). Określenie to może dotyczyć także systemów wykorzystujących modulowane wiązki świetlne przesyłane drogą napowietrzną pomiędzy budynkami lub lokalizacjami pozostającymi w bezpośrednim sąsiedztwie."
+  },
+  {
+    "term": "Komutacja komunikatów (message switching)",
+    "def": "technika routingu wykorzystująca system przechowywania i przekazywania komunikatów. Nie wymaga dedykowanej ścieżki połączenia. Zamiast tego każdy komunikat zawiera adres docelowy i jest przekazywany ze stacji nadawczej do stacji odbiorczej poprzez węzły pośrednie. W każdym węźle odbierany jest cały komunikat i po krótkim okresie przechowywania przekazywany dalej."
+  },
+  {
+    "term": "Komutacja obwodów (circuit switching)",
+    "def": "metoda komunikacji, w której pomiędzy dwoma urządzeniami zestawiana jest dedykowana ścieżka komunikacji, gwarantowana jest odpowiednia szerokość pasma, a opóźnienie w zasadzie ogranicza się do czasu propagacji. Komutacja obwodów jest powszechnie używana w sieciach telefonicznych."
+  },
+  {
+    "term": "Komutacja pakietów (packet switching)",
+    "def": "technika maksymalizująca wykorzystanie urządzeń do transmisji cyfrowej poprzez jednoczesną transmisję danych cyfrowych do wielu klientów w jednym kanale komunikacyjnym."
+  },
+  {
+    "term": "Koncentrator (wiring hub)",
+    "def": "urządzenie montowane zwykle w naściennej szafie, zawierające złącza dla różnych typów okablowania. Koncentrator zawiera także układy elektroniczne, które wzmacniają i powtarzają sygnały płynące kablami. W niektórych koncentratorach wbudowane są mikroprocesory monitorujące aktywność sieci."
+  },
+  {
+    "term": "Koncentrator kasetowy (chassis hub)",
+    "def": "koncentrator z możliwością rozbudowy poprzez dołączanie kart interfejsu. Każda taka karta jest podłączana do szybkiej magistrali, która zarządza ruchem danych. Takie koncentratory pozwalają na zarządzanie siecią, są uniwersalne, a także wyposażone są w nadmiarowe systemy zasilania, zapewniające wysoką niezawodność."
+  },
+  {
+    "term": "Koncentrator wieżowy (stackable hub)",
+    "def": "koncentratory w sieci Ethernet połączone kablem o wysokiej przepustowości. Połączenie to sprawia, że wszystkie koncentratory składające się na koncentrator wieżowy są widziane jako pojedynczy wtórnik sieci Ethernet i nie odnoszą się do nich ograniczenia związane z liczbą wtórników"
+  },
+  {
+    "term": "Koncentryk lub kabel koncentryczny (coax, coaxial cable)",
+    "def": "typ nośnika sieciowego. Kabel koncentryczny jest zbudowany z wewnętrznego kabla miedzianego otoczonego plastykową izolacją, na której znajduje się miedziany oplot lub ekran z folii aluminiowej."
+  },
+  {
+    "term": "Kontrola parzystości (parity)",
+    "def": "w transmisji znaków ASCII kontrola całkowitej liczby bitów równych 1 (przeciwnych do 0) w binarnej reprezentacji znaku. Ostatni, ósmy bit przyjmuje taką wartość, aby ta liczba była zawsze parzysta lub zawsze nieparzysta. Parzystość lub nieparzystość znaku można łatwo sprawdzić przy odbiorze; nieprawidłowe bity parzystości mogą pomóc w wykryciu błędów w transmisji."
+  },
+  {
+    "term": "Kontroler klastra (cluster controller)",
+    "def": "komputer znajdujący się pomiędzy grupą terminali a systemem mainframe, zbierający komunikaty i przesyłający je – po zmultipleksowaniu – pojedynczym łączem do komputera mainframe."
+  },
+  {
+    "term": "Konwerter A/D (A/D conventer)",
+    "def": "urządzenie, konwertujące sygnały analogowe (Analog) na cyfrowe (Digital)."
+  },
+  {
+    "term": "Konwerter D/A (D/A converter)",
+    "def": "urządzenie zmieniające impulsy cyfrowe w sygnały analogowe."
+  },
+  {
+    "term": "Korekcja(equalization)",
+    "def": "pównoważenie obwodu komunikacyjnego w taki sposób, aby jednakowo transmitował wszystkie częstotliwości."
+  },
+  {
+    "term": "Kursor (cursor)",
+    "def": "wskaźnik pokazujący na ekranie miejsce, w którym pojawi się następny znak."
+  },
+  {
+    "term": "LAN (Local Area Network) Sieć lokalna)",
+    "def": "sieć lokalna. Komputerowy system komunikacyjny o zasięgu nie większym niż kilka kilometrów, używający szybkich łączy (od 2 do 100 Mb/s)."
+  },
+  {
+    "term": "LAN Manager",
+    "def": "wycofany z produkcji sieciowy system operacyjny opracowany wspólnie przez Microsoft i 3Com."
+  },
+  {
+    "term": "LAN Manager/X (LM/X)",
+    "def": "LAN Manager dla środowisk uniksowych."
+  },
+  {
+    "term": "LAN Server",
+    "def": "zamknięty sieciowy system operacyjny firmy IBM bazujący na systemie OS/2. LAN Server jest kompatybilny z systemem LAN Manager opracowanym wspólnie przez Microsoft i 3Com."
+  },
+  {
+    "term": "LAP-B (link access procedures, balanced)",
+    "def": "procedura dostępu do łącza (symetryczna). Najpopularniejszy protokół sterowania łączem danych używany do połączenia terminali X.25 ze sprzętem DCE X.25. Standard X.25 określa również protokół LAP (niesymetryczny). Zarówno LAP-B, jak i LAP są bitowymi protokołami dla połączeń typu punkt-punkt w pełnym dupleksie z synchronizacją bitów. Jednostka transmisji danych nazywa się ramką. Ramki mogą zawierać kilka pakietów X.25."
+  },
+  {
+    "term": "LAT (Local Area Transport)",
+    "def": "protokół używany w sieci DECnet do celów komunikacji pomiędzy terminalem i hostem."
+  },
+  {
+    "term": "LDAP (Lightweight Directory Access Protocol)",
+    "def": "protokół usług katalogowych promowany przez firmę Netscape i innych dostawców oprogramowania. LDAP jest przeznaczony do identyfikacji wszystkich zasobów sieciowych dla klientów używających podzbioru funkcji katalogowych standardu X.500. Protokół ten szczególnie nadaje się do zastosowań w prostych aplikacjach w rodzaju przeglądarek WWW i innego oprogramowania internetowego."
+  },
+  {
+    "term": "Linia dzierżawiona (leased line)",
+    "def": "łącze komunikacyjne zarezerwowane do stałego użytkowania przez danego klienta; zwane również linią prywatną."
+  },
+  {
+    "term": "Linia komutowana (dial-up line)",
+    "def": "obwód komunikacyjny zestawiany poprzez wybranie numeru w komercyjnej sieci telefonicznej."
+  },
+  {
+    "term": "Linia wielopunktowa (multipoint line)",
+    "def": "pojedyncze łącze komunikacyjne dla kilku urządzeń współużytkowane przez jeden komputer i kilka terminali. Korzystanie z takiego łącza wymaga mechanizmu odpytywania. Inna nazwa to linia wielogałęziowa."
+  },
+  {
+    "term": "LMDS (Local Multipoint Distribution System)",
+    "def": "szerokopasmowe bezprzewodowe sieci komunikacyjne wykorzystujące fale o częstotliwościach 28 GHz do transmisji wideo i danych skierowanych do budynków, znajdujących się w obszarach komórek o promieniu kilku kilometrów."
+  },
+  {
+    "term": "LocalTalk",
+    "def": "metoda dostępu do nośników z prędkością 230,4 kb/s, opracowana przez firmę Apple"
+  },
+  {
+    "term": "Lokalny (local)",
+    "def": "określenie programów, plików, urządzeń peryferyjnych i mocy obliczeniowej dostępnych bezpośrednio z maszyny użytkownika, a nie poprzez sieć."
+  },
+  {
+    "term": "LU 6.2 (Logical Unit 6.2)",
+    "def": "w schemacie sieci SNA firmy IBM oprogramowanie implementujące konwersację warstwy sesji określoną protokołem APPC (patrz: Advanced Program-to-Program Protocol)."
+  },
+  {
+    "term": "Mainframe",
+    "def": "duży, scentralizowany system komputerowy."
+  },
+  {
+    "term": "MAP (Manufacturing Automation Protocol)",
+    "def": "sieć LAN z przekazywaniem żetonu i topologią magistrali pierwotnie opracowana przez General Motors, następnie zaadaptowana jako podzbiór standardów IEEE 802.3."
+  },
+  {
+    "term": "MAU",
+    "def": "1. (Medium Attachment Unit) – urządzenie nadawczo-odbiorcze (patrz: transceiver) dołączane do portu AUI na karcie Ethernet, wyposażone w przyłącza elektryczne i mechaniczne do podłączenia światłowodów, skrętki lub innych nośników; 2. (Multistation Access Unit) – używana przez IBM nazwa koncentratora w sieci Token-Ring."
+  },
+  {
+    "term": "MCA (Micro Channel Architekture)",
+    "def": "podstawowa architektura magistrali Micro Channel firmy IBM używanej w modelach komputerów osobistych IBM PS/2."
+  },
+  {
+    "term": "Metoda dostępu (access method)",
+    "def": "protokół określający, które urządzenie w sieci lokalnej ma w danej chwili dostęp do nośnika transmisji. Przykładem może być protokół CSMA/CD. Firma IBM używa tego samego terminu do określania różnych rodzajów oprogramowania komunikacyjnego, obejmującego protokoły wymiany danych, tworzenia plików i inne funkcje."
+  },
+  {
+    "term": "MHS (Message Handling System)",
+    "def": "program opracowany przez Action Technologies i promowany przez tę firmę wspólnie z Novellem, służący do wymiany plików pomiędzy różnymi programami oraz do przesyłania plików poprzez bramy do innych komputerów i sieci. W szczególności nadaje się do łączenia różnych systemów poczty elektronicznej."
+  },
+  {
+    "term": "MIB (management information base)",
+    "def": "katalog zawierający logiczne nazwy wszystkich zasobów informacyjnych w sieci, niezbędny do celów zarządzania siecią."
+  },
+  {
+    "term": "Midsplit",
+    "def": "typ szerokopasmowego systemu kablowego, w którym dostępne częstotliwości są dzielone na dwie grupy – jedną do nadawania, a drugą do odbierania. W systemie takim wymagany jest przemiennik częstotliwości."
+  },
+  {
+    "term": "MIF (management information file)",
+    "def": "plik używany przez interfejs DMI do opisu komponentów."
+  },
+  {
+    "term": "MIME (Multipurpose Internet Mail Extensions)",
+    "def": "zestaw rozszerzeń protokołu SMPT umożliwiających przesyłanie nietekstowych załączników do wiadomości poczty elektronicznej."
+  },
+  {
+    "term": "MMDS (Multichannell Multipoint Distribution Service)",
+    "def": "szerokopasmowa, bezprzewodowa sieć komunikacyjna, wykorzystująca fale o częstotliwości 2,5 GHz do transmisji wideo o zasięgu kilkudziesięciu kilometrów."
+  },
+  {
+    "term": "Modem (modulator/demodulator)",
+    "def": "urządzenie dokonujące translacji sygnałów elektrycznych na inne sygnały. Zazwyczaj modem jest używany do translacji stałoprądowych sygnałów z komputera lub terminala na sygnały analogowe przesyłane linią telefoniczną. Inne rodzaje modemów obsługują sygnały o częstotliwościach radiowych i sygnały świetlne."
+  },
+  {
+    "term": "Modem kablowy (cable modem)",
+    "def": "naprawdę to nie jest modem tylko analogowo-cyfrowy interfejs do systemu telewizji kablowej. Służy do odbioru danych z Internetu, przesyłanych kanałem telewizji kablowej i zazwyczaj jest dołączany do komputera PC poprzez kartę Ethernet i kabel. Patrz DOCSIS."
+  },
+  {
+    "term": "Modem o zmiennej częstotliwości (frequency-agile modem)",
+    "def": "modem używany w niektórych systemach szerokopasmowych, pozwalający na zmianę częstotliwości kanału komunikacyjnego."
+  },
+  {
+    "term": "Modulacja (modulation)",
+    "def": "przetwarzanie zmiennego sygnału nośnego w celu przekazania za jego pomocą informacji. W celu reprezentacji sygnałów analogowych lub cyfrowych można modulować amplitudę, częstotliwość lub fazę sygnału nośnego."
+  },
+  {
+    "term": "Modulacja impulsowo-kodowaPCM (pulse-code modulation – PCM)",
+    "def": "modulacja impulsowo-kodowa. Powszechna metoda konwersji głosu na sygnały cyfrowe. Wymagana szerokość pojedynczego kanału transmisji głosu w postaci cyfrowej wynosi 64 kb/s."
+  },
+  {
+    "term": "Most (bridge)",
+    "def": "urządzenie łączące sieci, czasem wbudowane w komputer PC, czasem pracujące jako urządzenie autonomiczne. Pozwala łączyć sieci danych, używając takich samych lub różnych łączy danych jak Ethernet, Token-Ring i X.25. Mosty łączą sieci LAN w warstwie łącza danych według modelu OSI."
+  },
+  {
+    "term": "MP, MPPP, MLPPP",
+    "def": "niezależnie od użytego skrótu protokół Multilink (Multilink Protocol) zapewnia kompresję danych, kontrolę błędów i metody obsługi wielu protokołów transmisji. Protokół MP zastępuje protokół PPP i starszy protokół SLIP (Serial Line Internet Protocol)."
+  },
+  {
+    "term": "Multipleksowanie z podziałem czasu (time-division multiplexing – TDM)",
+    "def": "metoda jednoczesnej transmisji wielu sygnałów w jednym obwodzie komunikacyjnym, polegająca na przydzielaniu dostępnego czasu konkurującym ze sobą stacjom. Przydzielany czas jest rzędu mikrosekund."
+  },
+  {
+    "term": "NAK (negative acknowledgement)",
+    "def": "potwierdzenie negatywne. Kod sterujący wskazujący na błąd przy odbiorze znaku lub bloku danych. Patrz: ACK."
+  },
+  {
+    "term": "NAS (network attached storage)",
+    "def": "ogólny termin opisujący autonomiczne urządzenia pamięci masowej podłączane bezpośrednio do sieci lokalnej. Urządzenia te zazwyczaj nie zawierają pełnego sieciowego systemu operacyjnego, takiego jak serwer plików, ale używają funkcji mikrojądra przeznaczonych do obsługi określonych operacji odczytu i zapisu danych w różnych systemach operacyjnych."
+  },
+  {
+    "term": "NAT (Network Address Translation)",
+    "def": "translacja adresów sieciowych. Funkcja odwzorowująca wewnętrzne adresy IP (prywatne, nieroutowane) na prawidłowe adresy internetowe w trybie wiele-do-jednego lub jeden-do-jednego. Niektóre firewalle i routery oferują funkcję NAT, często typu wiele-do-jednego, w celu wydajnego i bezpiecznego interfejsu proxy do Internetu."
+  },
+  {
+    "term": "NAU (network-addressable unit)",
+    "def": "w sieciach SNA urządzenie, które może być źródłem lub miejscem docelowym dla komunikatów."
+  },
+  {
+    "term": "Nazwane potoki (named pipe)",
+    "def": "techniki używane w komunikacji pomiędzy aplikacjami działającymi na tym samym komputerze lub w sieci. Obejmują one względnie łatwe w użyciu funkcje API, umożliwiające programistom łatwe wdrożenie komunikacji pomiędzy programami poprzez procedury podobne do operacji na plikach; otwierania, odczytywania i zapisywania."
+  },
+  {
+    "term": "NCP",
+    "def": "1. (NetWare Core Protocol) – format danych żądania używanych w systemie NetWare w celu dostępu do plików; 2. (Network Control Program) – specjalne oprogramowanie firmy IBM działające w procesorze czołowym i współpracujące z oprogramowaniem VTAM na hoście w celu połączenia programów z kontrolerami terminali."
+  },
+  {
+    "term": "NDIS (Network Driver Interface Specification)",
+    "def": "specyfikacja sterowników urządzeń opracowana wspólnie przez Microsoft i 3Com. Oprócz zapewnienia niezależności sterowników sieciowych od sprzętu i od protokołów, specyfikacja NDIS obsługuje zarówno system DOS, jak i OS/2, a także oferuje multipleksowanie protokołów, dzięki czemu na tym samym hoście może jednocześnie istnieć wiele stosów protokołów."
+  },
+  {
+    "term": "NetBEUI (NetBIOS Extended User Interface)",
+    "def": "rozszerzona wersja protokołu NetBIOS, używanego w sieciowych systemach operacyjnych, takich jak LAN Manager, LAN Server, Windows for Workgroup i Windows NT. Służy do sformalizowania interfejsu dla programistów i wprowadza nowe funkcje."
+  },
+  {
+    "term": "NetBIOS (Network Basic Input Output System)",
+    "def": "warstwa programowa opracowana pierwotnie przez firmy IBM i Sytek w celu połączenia sieciowego systemu operacyjnego z określonym sprzętem. Może ona również stanowić otwartą płaszczyznę komunikacji w warstwie transportowej pomiędzy stacjami w sieci. Współcześnie wielu producentów udostępnia wersje NetBIOSU, współpracujące z ich sprzętem, lub emuluje w swoich produktach sieciowych usługi komunikacyjne warstwy transportowej."
+  },
+  {
+    "term": "NetVIEW",
+    "def": "firmowa architektura sterowania i zarządzania siecią IBM. W architekturze tej wykorzystuje się głównie programy gromadzące dane w systemach mainframe oraz komputery PC działające w systemie OS/2."
+  },
+  {
+    "term": "NetWare",
+    "def": "seria sieciowych systemów operacyjnych i powiązanych produktów dostarczanych przez Novella."
+  },
+  {
+    "term": "NFS (Network File System)",
+    "def": "sieciowy system plików. Jeden z wielu protokołów rozproszonych systemów plików, umożliwiający komputerowi w sieci wykorzystanie plików i urządzeń peryferyjnych dołączonych do innego komputera w tej sieci tak, jakby były dostępne lokalnie. Protokół ten został opracowany w firmie Sun Microsystems i został adaptowany przez innych producentów."
+  },
+  {
+    "term": "NIC (Network Interface Card)",
+    "def": "karta sieciowa. Karta rozszerzeń umożliwiająca podłączenie komputera do sieci LAN."
+  },
+  {
+    "term": "NLM (NetWare Loadable Modules)",
+    "def": "aplikacje i sterowniki uruchamiane na serwerze w systemie Novell NetWare 386. Mogą być załadowane lub zatrzymane „w locie”. W niektórych sieciach takie aplikacje wymagałyby dedykowanego peceta."
+  },
+  {
+    "term": "NMP (Network Management Protocol)",
+    "def": "zestaw protokołów opracowanych przez AT&T przeznaczonych do wymiany informacji z urządzeniami sterującymi różnymi komponentami sieci, w tym modemami i multiplekserami T1."
+  },
+  {
+    "term": "NNTP (Network News Transport Protocol)",
+    "def": "rozszerzenie protokołu TCP/IP umożliwiające sieciowe usługi transportu wiadomości agencyjnych."
+  },
+  {
+    "term": "Nośnik (medium, l.mn media)",
+    "def": "kable lub przewody używane do przesyłania sygnałów w sieci. Typowe przykłady to kabel koncentryczny, światłowody i skrętka dwużyłowa."
+  },
+  {
+    "term": "Obwód czterożyłowy (four-wire circuit)",
+    "def": "rozwiązanie komunikacyjne, w którym z dwóch obwodów pracujących w trybie półdupleksowym (dwużyłowym) zestawia się jeden obwód pracujący w pełnym dupleksie."
+  },
+  {
+    "term": "Obwód wirtualny (virtual circuit)",
+    "def": "tymczasowa ścieżka połączenia ustanowiona przez oprogramowanie metodą komutacji pakietów, która z punktu widzenia użytkownika wygląda jak obwód dedykowany. Takie wirtualne łącze może być utrzymywane przez czas nieokreślony lub może być przerwane na żądanie."
+  },
+  {
+    "term": "ODI (Open Data-link Interface)",
+    "def": "standardowy interfejs transportu protokołów, pozwalający im współużytkować bez konfliktów jedną kartę sieciową."
+  },
+  {
+    "term": "Odporność na awarie (fault tolerance)",
+    "def": "metoda zapewniająca nieprzerwane działanie dzięki redundancji i zróżnicowaniu systemów."
+  },
+  {
+    "term": "Odpytywanie (polling)",
+    "def": "metoda sterowania kolejnością transmisji urządzeń komunikacyjnych korzystających ze wspólnego łącza, polegająca na wysyłaniu do każdego urządzenia zapytania o „chęć” transmisji."
+  },
+  {
+    "term": "Ograniczony wejściem-wyjściem (I/O bound)",
+    "def": "stan, w którym operacje na portach I/O są elementem ograniczającym możliwości wykonania programu."
+  },
+  {
+    "term": "On-line",
+    "def": "połączenie z siecią lub z systemem hosta (serwerem)."
+  },
+  {
+    "term": "ONMS (Open Network Management System)",
+    "def": "architektura produktów zgodnych z protokołem CMIP opracowana przez Digital Communications Asociates."
+  },
+  {
+    "term": "Operator publiczny (common carrier)",
+    "def": "firma telekomunikacyjna (na przykład telefoniczna), która świadczy publiczne usługi telekomunikacyjne."
+  },
+  {
+    "term": "Opóźnienie (delay)",
+    "def": "najczęściej jest to przerwa w aktywności. Opóźnienie może być również rodzajem zniekształcenia w obwodach komunikacyjnych. Cechą charakterystyczną obwodów elektrycznych jest spowolnienie i zniekształcenie sygnałów o wysokiej częstotliwości. Do korekcji sygnału służą equalizery."
+  },
+  {
+    "term": "OPT (Open Protocol Technology)",
+    "def": "strategia firmy Novell zakładająca całkowitą niezależność od protokołów. Dzięki temu podejściu system NetWare obsługuje sprzęt pochodzący od różnych producentów."
+  },
+  {
+    "term": "OS/2 (Operating System/2)",
+    "def": "system operacyjny opracowany wspólnie przez IBM i Microsoft na potrzeby systemów komputerowych z procesorami Intela. W odróżnieniu od swojego przodka – systemu DOS – OS/2 jest wielozadaniowym systemem operacyjnym."
+  },
+  {
+    "term": "OS/2 Extended Editions",
+    "def": "własna, rozszerzona wersja systemu OS/2 firmy IBM. Obejmuje wbudowane narzędzia komunikacyjne i funkcje zarządzania bazą danych."
+  },
+  {
+    "term": "OSF (Open Software Foundation)",
+    "def": "konsorcjum czołowych firm branży oprogramowania pracujących nad standaryzacją systemu operacyjnego UNIX."
+  },
+  {
+    "term": "OSI (Open Systems Interconnection)",
+    "def": "współdziałanie systemów otwartych. Model odniesienia dla sieci komputerowych opracowany przez Międzynarodową Organizację Normalizacyjną (ISO). W modelu tym sieć podzielona jest na siedem warstw. Każda warstwa opiera się na usługach realizowanych przez niższe warstwy."
+  },
+  {
+    "term": "OSPF (Open Shortest Path First)",
+    "def": "protokół routingu adaptacyjnego (link state routing) używany do określenia najtańszej drogi przesłania komunikatu, sprawdzający liczbę routerów, prędkość transmisji, opóźnienia i koszt łącza."
+  },
+  {
+    "term": "OverVIEW",
+    "def": "architektura produktów firmy Proteon zgodna z protokołem SNMP."
+  },
+  {
+    "term": "PAD (packet assembler/disasembler)",
+    "def": "PAD X.25; – urządzenie sprzętowo-programowe, niekiedy wbudowane w komputer PC, umożliwiające dostęp użytkowników do sieci X.25. Zalecenia CCIT X.3, X.28 i X.29 definiują parametry urządzenia PAD, interfejs terminal-PAD i PAD-host sieci X.25."
+  },
+  {
+    "term": "Pakiet (packet)",
+    "def": "blok danych przesyłany w sieci zawierający informacje identyfikacyjne stacji nadawczej i odbiorczej, informacje kontroli błędów i dane użytkownika."
+  },
+  {
+    "term": "Pakiet danych (data packet)",
+    "def": "według protokołu X.25 jest to blok danych przenoszący informację w trybie full-duplex poprzez komutowane obwody wirtualne X.25 (patrz: SVC) lub stałe obwody wirtualne X.25 (patrz: PVC). Pakiety danych w sieci X.25 mogą zawierać do 1024 bajtów danych użytkownika, ale najczęściej stosowany rozmiar to 128 bajtów (wartość domyślna X.25)."
+  },
+  {
+    "term": "Pakiet połączenia (call packet)",
+    "def": "blok danych zawierający informacje adresowe i inne potrzebne do zestawienia w sieci X.25 komutowanego obwodu wirtualnego (SVC)."
+  },
+  {
+    "term": "Pakiet restartu (restart packet)",
+    "def": "blok danych powiadamiający terminale w sieci X.25 o wystąpieniu nieusuwalnego błędu w sieci. Pakiety restartu zerują wszystkie komutowane kanały wirtualne (SVC) i ponownie synchronizują wszystkie istniejące stałe kanały wirtualne (PVC) pomiędzy sprzętem DTE a sprzętem DCE."
+  },
+  {
+    "term": "Pakiet zerowania (clear packet)",
+    "def": "blok danych zawierający polecenie równoważne odłożeniu słuchawki aparatu telefonicznego."
+  },
+  {
+    "term": "Pamięć podręczna (cache)",
+    "def": "część pamięci RAM przeznaczona do przechowywania danych, co do których jest duże prawdopodobieństwo, że będą pobierane ponownie. Dzięki temu skraca się czas dostępu do takich danych."
+  },
+  {
+    "term": "PAP (packet level procedure)",
+    "def": "protokół transferu pakietów pomiędzy terminalami (DTE) sieci X.25 a urządzeniami DCE tej sieci. PAP obsługuje pełny dupleks, sekwencjonowanie danych, sterowanie przepływem, usługi rozliczeniowe, detekcję błędów i odtwarzanie po wystąpieniu błędu."
+  },
+  {
+    "term": "Pasmo podstawowe (baseband)",
+    "def": "sieć przesyłająca sygnały w postaci impulsów prądu stałego, a nie w postaci sygnału z modulacją częstotliwościową."
+  },
+  {
+    "term": "Pasywna stacja czołowa (passive head end)",
+    "def": "urządzenie łączące dwa kable szerokopasmowe w systemie z podwójnymi kablami. Taka stacja nie dokonuje przemiany częstotliwości."
+  },
+  {
+    "term": "PBX (passive exchange branch)",
+    "def": "centrala telefoniczna obsługująca określoną lokalizację (np. firmę – przyp. tłum.). Wiele central PBX może transmitować dane komputerowe bez konieczności używania modemów."
+  },
+  {
+    "term": "PCM",
+    "def": "patrz: Modulacja impulsowo-kodowa"
+  },
+  {
+    "term": "PDS (Premise Distribution System)",
+    "def": "firmowy standard AT&T systemu okablowania telekomunikacyjnego budynków."
+  },
+  {
+    "term": "Pełny dupleks (full duplex)",
+    "def": "komunikacja z możliwością jednoczesnej transmisji danych w obu kierunkach po tym samym łączu."
+  },
+  {
+    "term": "Pętla lokalna (local loop)",
+    "def": "linia łącząca mieszkanie abonenta z centralą telefoniczną."
+  },
+  {
+    "term": "Pętla prądowa (current loop)",
+    "def": "interfejs elektryczny reagujący na zmiany natężenia prądu, a nie napięcia. Używany dawniej w dalekopisach."
+  },
+  {
+    "term": "Pierścień (ring)",
+    "def": "metoda połączenia sieciowego, w której komunikaty są przekazywane kolejno każdej stacji sieciowej. Większość sieci w topologii pierścienia używa protokołów z przekazywaniem żetonu, który ma postać specjalnego ciągu bitów i umożliwia rozpoczęcie transmisji przez stację, która posiada żeton."
+  },
+  {
+    "term": "PING (Packet Internet Groper)",
+    "def": "program diagnostyczny powiązany z protokołem TCP/IP i używany do testowania internetowych kanałów komunikacyjnych pomiędzy stacjami sieciowymi."
+  },
+  {
+    "term": "Podział częstotliwości (frequency division multiplexing)",
+    "def": "technika przesyłania wielu sygnałów jednym obwodem, wykorzystująca separację częstotliwości"
+  },
+  {
+    "term": "Pole (field)",
+    "def": "określona pozycja wewnątrz ramki wiadomości. Pozycje te są oznaczane jako pola sterujące, pola flag i tym podobne. Bity poszczególnych pól w wiadomości mają określone znaczenie dla stacji odbierających."
+  },
+  {
+    "term": "POP3 (Post Office Protocol, wersja 3)",
+    "def": "prosty protokół do pobierania poczty elektronicznej z serwerów pocztowych."
+  },
+  {
+    "term": "Port szeregowy (serial port)",
+    "def": "port wejścia-wyjścia, poprzez który transmisja odbywa się bit po bicie w przeciwieństwie do transmisji równoległej, w której jednocześnie przesyła się po kilka (zwykle osiem) bitów. Standardowym protokołem sygnalizacji przy transmisji szeregowej jest RS-232C."
+  },
+  {
+    "term": "Potok (pipe)",
+    "def": "proces komunikacyjny w ramach systemu operacyjnego pełniący rolę interfejsu pomiędzy urządzeniami komputera (klawiaturą, napędami dysków, pamięcią, itp.) i aplikacjami. Potoki upraszczają tworzenie aplikacji, działając jako „bufor” pomiędzy programem a zawiłościami sprzętu lub oprogramowania sterującego sprzętem. Programista tworzy kod dla pojedynczego potoku, a nie dla kilku poszczególnych urządzeń. Potoki są również używane w komunikacji pomiędzy programami."
+  },
+  {
+    "term": "Półdupleks (half-duplex)",
+    "def": "1. transmisja naprzemienna; każda stacja może albo nadawać, albo odbierać, ale nie mogą robić tego jednocześnie; 2. w przypadku terminali stan, w którym na terminalu wyświetlane są znaki wprowadzone lokalnie, a nie znaki odbite od zdalnego końca; 3. opcja konfiguracji w niektórych modemach umożliwiająca obsługę echa znaków lokalnych."
+  },
+  {
+    "term": "PPP (Point-to-Point Protocol)",
+    "def": "protokół umożliwiający połączenie się z Internetem poprzez modem i linię telefoniczną. Cechuje się korekcją błędów i ochroną danych, w przeciwieństwie do starszego protokołu o podobnym przeznaczeniu – SLIP. Patrz także: MP."
+  },
+  {
+    "term": "Presentation Manager",
+    "def": "część systemu operacyjnego OS/2 udostępniająca użytkownikom graficzny interfejs użytkownika. Wygląd tego interfejsu jest zbliżony do interfejsu Windows."
+  },
+  {
+    "term": "PRI",
+    "def": "patrz: Dostęp pierwotny"
+  },
+  {
+    "term": "Procesor aplikacji (applications processor)",
+    "def": "specjalny komputer, ktory umożliwia świadczenie określonych usług w systemach telefonicznych (na przykład poczty głosowej, systemów przekazywania wiadomości i poczty elektronicznej)."
+  },
+  {
+    "term": "PROFS (Professional Office System)",
+    "def": "oprogramowanie do pracy grupowej opracowane przez IBM, działające w systemach mainframe VM/CMS. System PROFS jest często używany do wymiany poczty elektronicznej."
+  },
+  {
+    "term": "Program drugoplanowy (background program)",
+    "def": "program realizujący swoje funkcje „w tle”, kiedy użytkownik pracuje z innym programem. Na drugim planie często pracują programy komunikacyjne. Mogą one odbierać komunikaty, kiedy użytkownik pracuje z innym programem. Odebrane komunikaty są zapisywane w celu późniejszego wyświetlenia."
+  },
+  {
+    "term": "Protokół (protocol)",
+    "def": "specyfikacja opisująca reguły i procedury, które powinny być przestrzegane przez produkty przy realizacji wszelkich funkcji sieciowych, na przykład przy transmisji danych. Produkty i urządzenia używające tych samych protokołów mogą się ze sobą komunikować w tej samej sieci."
+  },
+  {
+    "term": "Protokół dostępu (access protocol)",
+    "def": "zasady ruchu przestrzegane przez stacje robocze w sieci LAN w celu uniknięcia kolizji danych przy wysyłaniu sygnałów poprzez współużytkowany nośnik sieciowy; nazywany również protokołem dostępu do nośnika (patrz: MAC – Media-Access Protocol). Popularne przykłady to wspólny dostęp z wykrywaniem nośnej (patrz: CSMA – Carrier Sense Multiple Access) oraz przekazywanie żetonu."
+  },
+  {
+    "term": "Przekazywanie żetonu (token passing)",
+    "def": "protokół dostępu do nośnika, w którym pomiędzy węzłami sieci przekazywany jest kolejno specjalny komunikat (żeton ang. token), który daje prawo do transmisji."
+  },
+  {
+    "term": "Przemiennik częstotliwości (frequency converter)",
+    "def": "w szerokopasmowych systemach kablowych urządzenie, które rozdziela sygnały nadawcze i odbiorcze."
+  },
+  {
+    "term": "Przerwa (space)",
+    "def": "stan sygnału odpowiadający logicznemu zeru."
+  },
+  {
+    "term": "Przerwanie (interrupt)",
+    "def": "sygnał zawieszający chwilowo działanie programu i przekazujący sterowanie do systemu operacyjnego, w chwili gdy wymagane jest wykonanie operacji wyjścia lub wejścia. Przerwania mogą mieć priorytety. Przerwanie o wyższym priorytecie jest przetwarzane w pierwszej kolejności."
+  },
+  {
+    "term": "Przesłuch (crosstalk)",
+    "def": "przedostanie się sygnału z jednego kanału do innego. Ma bardzo szkodliwy wpływ na transmisję danych. Zazwyczaj ostrożna regulacja parametrów obwodów może wyeliminować przesłuchy."
+  },
+  {
+    "term": "Przestrzenie wielonazwowe (multiple name spaces)",
+    "def": "możliwość powiązania wielu nazw lub innych informacji z pojedynczym plikiem. Pozwala na zmianę nazwy pliku odpowiednio do systemu komputerowego, na przykład PC lub Mac."
+  },
+  {
+    "term": "Przestrzeń nazw (namespace)",
+    "def": "zbiór niepowatarzalnych nazw domen. Internetowa domena „.com” jest przestrzenią nazw reprezentujących wszystkie firmy komercyjne."
+  },
+  {
+    "term": "PSDN (packet switched data network)",
+    "def": "sieć transmisji danych z komutacją pakietów."
+  },
+  {
+    "term": "PU (physical unit)",
+    "def": "jednostka fizyczna. W sieciach SNA terminem tym określa się zwykle terminal lub drukarkę podłączoną do kontrolera."
+  },
+  {
+    "term": "Publiczna sieć danych (public data network)",
+    "def": "komercyjna lub państwowa – monopolistyczna sieć z komutacją pakietów, używana do świadczenia publicznych usług transmisji danych."
+  },
+  {
+    "term": "PVC (permanent virtual circuit)",
+    "def": "patrz: VC (virtual circuit)."
+  },
+  {
+    "term": "RAID (Redundant Array of Independent Drives)",
+    "def": "nadmiarowa macierz niezależnych dysków. Urządzenie, w którego koncepcji wykorzystano programowe rozdzielenie zapisywanych danych na kilka dysków w celu zwiększenia niezawodności zapisu. Macierze RAID różnych poziomów wykorzystują różne metody organizacji danych na dyskach."
+  },
+  {
+    "term": "RAID Level 0",
+    "def": "macierz RAID poziomu 0. Zapis danych na wielu dyskach. Brak korekcji błędów i nadmiarowości."
+  },
+  {
+    "term": "RAID Level 1",
+    "def": "zapis lustrzany lub tworzenie cienia dysku. Jeden dysk i jedna kopia zapasowa na dodatkowym dysku; wszystkie dane są dodatkowo rejestrowane na drugim dysku (zapis lustrzany)."
+  },
+  {
+    "term": "RAID Level 2",
+    "def": "dane są zapisywane na wielu dyskach, a na dodatkowych dyskach zapisywane są kody kontroli i korekcji błędów (error check and control – ECC) używane w przypadku odtwarzania po wystąpieniu awarii."
+  },
+  {
+    "term": "RAID Level 3",
+    "def": "dane są zapisywane bajt po bajcie na różnych dyskach, a dodatkowy dysk jest przeznaczony na zapis kontroli parzystości."
+  },
+  {
+    "term": "RAID Level 4",
+    "def": "różni się od Level 3 tym, że dane dzielone są na większe fragmenty i zapisywane blok po bloku na różnych dyskach. Na osobnym dysku zapisywana jest kontrola parzystości."
+  },
+  {
+    "term": "RAID Level 5",
+    "def": "najpopularniejszy typ macierzy RAID. Dane są dzielone na bloki i każdy blok jest zapisywany na innym dysku. Dane parzystości także są zapisywane na różnych dyskach."
+  },
+  {
+    "term": "RAID Level 6",
+    "def": "pełni taką rolę jak RAID-5 z tym, że macierz wyposażona jest w zapasowe kontrolery, wentylatory, złącza i inne elementy."
+  },
+  {
+    "term": "RAM (Random Access Memory)",
+    "def": "pamięć o dostępnie swobodnym (bezpośrednim). Nazywana również pamięcią do odczytu-zapisu (read-write memory). Pamięć używana do uruchamiania programów na komputerze."
+  },
+  {
+    "term": "Ramka (frame)",
+    "def": "pakiet danych w sieci Token-Ring. Określa również pakiety danych w innych sieciach, na przykład X.25 i SNA."
+  },
+  {
+    "term": "Readresator (redirector)",
+    "def": "moduł oprogramowania ładowany na każdej stacji roboczej. Jego zadaniem jest przechwytywanie wywołań usług związanych ze współużytkowaniem plików i sprzętu zgłaszanych przez aplikacje i kierowanie ich poprzez sieć w celu realizacji."
+  },
+  {
+    "term": "RF (radio frequency)",
+    "def": "częstotliwość radiowa. Termin ogólny używany w odniesieniu do technologii związanych z telewizja kablową i sieciami szerokopasmowymi. Transmisje z częstotliwością radiową wykorzystują fale elektromagnetyczne o częstotliwościach rzędu magaherców (MHz)."
+  },
+  {
+    "term": "RFC (Request for comments)",
+    "def": "ogólna nazwa dokumentów opracowywanych w procedurze ustanawiania nowych standardów dla protokołów internetowych. Obecnie dokumenty RFC opisują ponad pięćdziesiąt standardów IETF – tak zwanych STD. Dokument STD0001, który można znaleźć w Sieci za pomocą wyszukiwarki internetowej, zawiera pełną i aktualną listę obowiązujących standardów."
+  },
+  {
+    "term": "RFS (Remote FIle Service)",
+    "def": "jeden z wielu protokołów sieciowych rozproszonych systemów plików, umożliwiających korzystanie z plików i zasobów udostępnianych w sieci, tak jak gdyby to były zasoby lokalne. RFS został opracowany przez AT&T i zaadaptowany przez innych dostawców jako część systemu UNIX V."
+  },
+  {
+    "term": "RIP (Routing Information Protocol)",
+    "def": "najprostszy protokół routingu. Protokół RIP znajduje najkrótszą, pod względem liczby przeskoków, drogę pomiędzy dwoma punktami w sieci."
+  },
+  {
+    "term": "RJ-11/RJ-45",
+    "def": "oznaczenia standardowych telefonicznych złączy modułowych. RJ-11 to ośmiostykowe złącze (wtyczka i gniazdko) używane w większości aparatów telefonicznych. RJ-45 to ośmiostykowe złącze używane do zakończenia kabli transmisyjnych ze skrętki dwużyłowej."
+  },
+  {
+    "term": "RJE (Remote Job Entry)",
+    "def": "metoda dostarczania zadań do systemów mainframe IBM w postaci wsadowej. Chociaż obecnie jest zastępowana przez system 3270, ciągle jeszcze jest szeroko używana w niektórych instalacjach."
+  },
+  {
+    "term": "RO (receive-only)",
+    "def": "tylko odbiór. Termin odnoszący się do urządzeń z komunikacją jednokierunkową, takich jak niektóre drukarki, plotery i monitory."
+  },
+  {
+    "term": "ROM (read only memory)",
+    "def": "pamięć tylko-do-odczytu. Pamięć z fabrycznie zapisanymi w niej programami, której zawartości nie można zapisać ponownie lub zmienić."
+  },
+  {
+    "term": "Router",
+    "def": "urządzenie łączące sieci, podobne do mostu, ale obsługujące pakiety i ramki zawierające dane określonych protokołów. Routery łączą sieci LAN w warstwie sieci według modelu OSI. Współczesne routery jednocześnie obsługują różne stosy protokołów i kierują pakiety lub ramki poprzez odpowiednie łącza do ich lokalizacji docelowej."
+  },
+  {
+    "term": "Rozgałęźnik (tap)",
+    "def": "złącze podłączane do kabla, które nie blokuje transmisji sygnałów w tym kablu."
+  },
+  {
+    "term": "Rozgłaszanie (broadcast)",
+    "def": "wysyłanie wiadomości do wszystkich stacji dołączonych do sieci lub do całej klasy takich stacji."
+  },
+  {
+    "term": "Równorzędne współużytkowanie zasobów (peer-to-peer resource sharing)",
+    "def": "architektura umożliwiająca dowolnej stacji udostępnienie swoich zasobów w sieci przy jednoczesnej obsłudze aplikacji działających lokalnie."
+  },
+  {
+    "term": "RPC (Remote Procedure Call)",
+    "def": "wywołanie odległej procedury. Zestaw narzędzi programistycznych opracowanych przez konsorcjum producentów oprogramowania z myślą o ułatwieniu tworzenia aplikacji rozproszonych. Narzędzia te automatycznie generują kod dla obu stron aplikacji (klienta i serwera) i pozwalają programistom skoncentrować się na innych elementach aplikacji."
+  },
+  {
+    "term": "RS-232C",
+    "def": "standard elektrycznego połączenia urządzeń opracowany przez EIA (Electrical Industries Association); odpowiednik standardu CCIT V.24. Standard RS-232C jest używany do komunikacji poprzez porty szeregowe."
+  },
+  {
+    "term": "RS-449",
+    "def": "standard EIA używany w systemach komunikacyjnych z binarną transmisją szeregową synchroniczną i asynchroniczną."
+  },
+  {
+    "term": "RU (request unit lub response unit)",
+    "def": "jednostka pytająca(odpowiadająca). Komunikat z zapytaniem lub odpowiedzą wysyłany podczas sesji komunikacyjnej."
+  },
+  {
+    "term": "Rywalizacja (contention)",
+    "def": "sytuacja, w której kilka stacji jednocześnie próbuje użyć tego samego kanału."
+  },
+  {
+    "term": "SAA (Systems Application Architecture)",
+    "def": "zestaw specyfikacji opracowanych przez IBM, opisujących interfejsy użytkowników, aplikacji i programów komunikacyjnych. SAA jest próbą standaryzacji stylu aplikacji i metod używanych przez nie do komunikacji."
+  },
+  {
+    "term": "SAN (Storage Area Network)",
+    "def": "koncepcja architektury centralnej pamięci masowej. Sieć SAN obejmuje wiele serwerów współpracujących z centralnym składem danych zbudowanym w oparciu o niezawodny, sprzęt w konfiguracji nadmiarowej wykorzystujący macierze RAID. Celem koncepcji jest stworzenie centralnej pamięci masowej z wyrafinowanymi metodami zarządzania. Istotną częścią koncepcji SAN jest standard Fibre Channel."
+  },
+  {
+    "term": "SCSI (Small Computer System Interface)",
+    "def": "interfejs sprzętowy obejmujący kilka konfiguracji podłączeń i sygnalizacji umożliwiających podłączenie urządzeń peryferyjnych, a w szczególności napędów dysków, napędów CD-ROM i napędów taśm. Różne konfiguracje SCSI umożliwiają przesyłanie danych z prędkościami od 5 do 40 MB/s. W celu zwiększenia niezawodności magistralę SCSI może obsługiwać kilka kontrolerów SCSI."
+  },
+  {
+    "term": "SDLC (synchronous data link control)",
+    "def": "warstwa łącza danych w architekturze SNA. SDLC jest wydajniejszą metodą dzielenia danych na pakiety w celu transmisji pomiędzy komputerami niż starszy protokół bisync. Pakiety są przesyłane bez narzutu związanego z danymi synchronizacji i bitami wypełniającymi."
+  },
+  {
+    "term": "Serwer (server)",
+    "def": "1. komputer z dużym zasilaczem, w obudowie szafkowej ułatwiającej rozbudowę i wymianę komponentów sprzętowych; 2. dowolny komputer w sieci, udostępniający innym stacjom sieciowym pliki, drukarki i usługi komunikacyjne."
+  },
+  {
+    "term": "Serwer plików (file server)",
+    "def": "typ serwera, na którym w katalogach publicznych i prywatnych przechowywane są pliki użytkowników w sieci LAN. Patrz: serwer."
+  },
+  {
+    "term": "Serwer proxy (proxy serwer)",
+    "def": "rodzaj zapory ochronnej, dzięki której intranet jest widziany od strony Internetu jako pojedynczy adres IP, stąd nazwa „proxy” (z ang. pośrednik). Popularne serwery proxy warstwy HTML obsługują pliki, a większość takich serwerów udostępnia dodatkową funkcję przechowywania w lokalnej pamięci podręcznej poprzednio przeglądanych stron WWW."
+  },
+  {
+    "term": "Serwer wydruku (print server)",
+    "def": "komputer udostępniający pozostałym komputerom w sieci jedną lub kilka drukarek. Zazwyczaj serwer wydruku potrzebuje dysku twardego do składowania kolejki zadań wydruku oczekujących na drukarkę."
+  },
+  {
+    "term": "Sesja (session)",
+    "def": "połączenie komunikacyjne terminala (lub komputera PC z działającym programem emulacji terminala) z systemem mainframe. Liczba sesji, które mogą być jednocześnie aktywne jest ograniczona oprogramowaniem bramy sieci LAN i konfiguracją sprzętową."
+  },
+  {
+    "term": "SFT (System Fault Tolerance)",
+    "def": "odporność systemu na awarie. Zdolność do odtworzenia stanu systemu po jego poważnej awarii (załamaniu) lub do uniknięcia takiej awarii. Na przykład firma Novell jako metodę odtwarzania systemu używa systemu TTS (Transaction Tracking System – system śledzenia transakcji), technik zapisu lustrzanego i dublowania dysków."
+  },
+  {
+    "term": "Sieć (network)",
+    "def": "ciągłe połączenie pomiędzy dwoma lub kilkoma komputerami, umożliwiające współużytkowanie plików i zasobów."
+  },
+  {
+    "term": "Sieć metropolitalna (metropolitan area network – MAN)",
+    "def": "publiczna szybka sieć (100 Mb/s i więcej) umożliwiająca transmisję głosu i danych na odległość od 40 do 80 km."
+  },
+  {
+    "term": "Sieć z współużytkowaniem nośnika (media-sharing LAN)",
+    "def": "sieć, której wszystkie węzły współużytkują kabel, używając schematu sterowania dostępem do nośnika (patrz: MAC); odmiennie działają sieci z komutacją obwodów i sieci z komutacją pakietów."
+  },
+  {
+    "term": "Skrętka dwużyłowa (twisted-pair Ethernet)",
+    "def": "kabel składający się z dwóch przewodów skręconych ze sobą (dla kategorii 5 – 6 obrotów na cal) w celu wytworzenia ekranu z pola elektromagnetycznego w celu eliminacji przesłuchów pomiędzy sąsiednimi parami."
+  },
+  {
+    "term": "SLIP (Serial Line Internet Protocol)",
+    "def": "Protokół komunikacyjny do transmisji datagramów protokołu IP poprzez linie szeregowe."
+  },
+  {
+    "term": "SMB (Server Messages Block)",
+    "def": "protokół sieciowy rozproszonego systemu plików umożliwiający korzystanie z plików i urządzeń peryferyjnych, tak jakby były podłączone lokalnie do komputera. Opracowany przez Microsoft i adaptowany przez IBM i wielu innych producentów."
+  },
+  {
+    "term": "SMTP (Simple Mail Transfer Protocol)",
+    "def": "protokół opisujący system poczty elektronicznej po stronie hosta i użytkownika. Wiele firm sprzedaje oprogramowanie serwera SMTP (zwykle dla systemu UNIX), które może wymieniać pocztę z zamkniętymi systemami poczty, jak na przykład z systemem PROFS firmy IBM. Z kolei oprogramowanie klienta SMTP jest najczęściej zawarte w pakietach narzędzi TCP/IP dla komputerów PC."
+  },
+  {
+    "term": "SNA (Systems Network Architecture)",
+    "def": "architektura systemów sieciowych. Opracowany przez IBM system połączenia produktów tej firmy, umożliwiający im wzajemną komunikację i współużytkowanie danych."
+  },
+  {
+    "term": "SNADS (SNA Distribution Services)",
+    "def": "protokół IBM pozwalający na dystrybucję poczty elektronicznej i załączonych do niej dokumentów w sieciach SNA."
+  },
+  {
+    "term": "SNMP (Simple Network Management Protocol)",
+    "def": "prosty protokół zarządzania siecią. Protokół opisujący strukturę formatowania komunikatów i transmisji informacji pomiędzy urządzeniami kontrolnymi a programami zbierającymi dane. Opracowany wspólnie przez Departament Obrony USA, firmy z branży sieci komputerowych i instytucje akademickie jako część zestawu protokołów TCP/IP."
+  },
+  {
+    "term": "Sprzęg akustyczny (acoustic coupler)",
+    "def": "element modemu fizycznie zawierający słuchawkę telefoniczną, na który kładzie się prawdziwą słuchawkę od aparatu telefonicznego w celu połączenia modemu z linią telefoniczną. (Obecnie niestosowany – przyp. tłum.)."
+  },
+  {
+    "term": "SPX (Seqenced Packet Exchange)",
+    "def": "rozszerzony zestaw komend zaimplementowany na bazie protokołu IPX w celu stworzenia rzeczywistego interfejsu warstwy transportowej według modelu OSI. Protokół SPX obejmuje więcej funkcji w porównaniu z protokołem IPX, na przykład gwarantowaną dostawę pakietów."
+  },
+  {
+    "term": "SQL (Structured Query Language)",
+    "def": "strukturalny język zapytań. Formalny podjęzyk danych służący do określania standardowych operacji w bazach danych, na przykład wczytywania, dodawania, zmieniania i usuwania rekordów."
+  },
+  {
+    "term": "STA (Spanning Tree Algorithm)",
+    "def": "technika – bazująca na specyfikacji IEEE 802.1 – wykrywania i eliminowania logicznych pętli w sieciach połączonych mostami. W przypadku istnienia wielu dróg pomiędzy węzłami, algorytm STA pozwala mostowi użyć tylko jednej z nich (najefektywniejszej). W przypadku awarii łącza algorytm STA dokonuje automatycznej rekonfiguracji sieci i uaktywnia inną drogę, eliminując przerwy w działaniu sieci."
+  },
+  {
+    "term": "Stacja czołowa (head end)",
+    "def": "w telewizji kablowej odpowiednik centrali telefonicznej, urządzenia stacji czołowej stanowią główny punkt odbiorczy i zarazem dystrybucyjny sieci telewizji kablowych. W stacji czołowej zbiegają się wszystkie kable telewizyjne z danego obszaru."
+  },
+  {
+    "term": "StarLAN",
+    "def": "system sieciowy opracowany przez AT&T, wykorzystujący protokół CSMA i okablowanie ze skrętki dwużyłowej; podzbiór specyfikacji 802.3. Obecnie nieużywany."
+  },
+  {
+    "term": "Startowa pamięć ROM (boot ROM)",
+    "def": "kość pamięci tylko-do-odczytu, umożliwiająca komunikację stacji roboczej z serwerem plików i wczytanie programu startowego DOS z serwera. Dzięki niej w sieci mogą pracować stacje bez napędów dyskowych."
+  },
+  {
+    "term": "STD",
+    "def": "standardy IETF opisujące ponad pięćdziesiąt protokołów i procedur. Dokument STD0001 zawiera pełną i aktualną listę wszystkich standardów STD."
+  },
+  {
+    "term": "Sterowanie łączem danych (data-link control)",
+    "def": "warstwa komunikacyjna architektury SNA zarządzająca fizycznymi obwodami danych."
+  },
+  {
+    "term": "Sterowanie przepływem (flow control)",
+    "def": "konwencja używana do regulowania komunikacji pomiędzy dwoma węzłami. Możliwe są sprzętowe i programowe techniki sterowania przepływem."
+  },
+  {
+    "term": "Sterowanie transmisją (transmission control)",
+    "def": "warstwa sieci SNA odpowiedzialna za kontrolowanie sesji i zarządzanie komunikacją."
+  },
+  {
+    "term": "Sterownik (driver)",
+    "def": "program będący interfejsem pomiędzy oprogramowaniem a sprzętem karty sieciowej."
+  },
+  {
+    "term": "Sterownik komunikacyjny (communications controller)",
+    "def": "programowalny komputer dedykowany do celów transmisji danych i używany w sieciach IBM SNA jako fronton (front end) systemu."
+  },
+  {
+    "term": "Strumienie (streams)",
+    "def": "architektura wprowadzona w systemie UNIX V w wersji 3.2, udostępniająca elastyczne, warstwowe kanały komunikacji pomiędzy procesami (programami) i sterownikami urządzeń. Wiele firm oferuje aplikacje i urządzenia, które można zintegrować poprzez protokoły strumieniowe."
+  },
+  {
+    "term": "Sygnał nośny (carrier signal)",
+    "def": "sygnał tonowy lub radiowy modulowany przez dane, używany zwykle w transmisji dalekiego zasięgu."
+  },
+  {
+    "term": "Sygnał strobujący (strobe)",
+    "def": "elektryczny impuls używany do wywoływania transmisji informacji."
+  },
+  {
+    "term": "Sygnał zacięcia (jam signal)",
+    "def": "sygnał generowany przez kartę sieciową, powiadamiający inne karty o wystąpieniu kolizji."
+  },
+  {
+    "term": "Synchroniczny (synchronous)",
+    "def": "termin odnoszący się do systemów transmisyjnych, w których transmisja znaków jest synchronizowana przez początkowy znak synchronizacji i wspólny sygnał zegarowy. W takiej transmisji nie używa się bitów startu i stopu."
+  },
+  {
+    "term": "Szerokopasmowy (broadband)",
+    "def": "sformułowanie odnosi się do sieci, w których informacje są transmitowane w postaci modulacji sygnału nośnego, a nie bezpośrednio jako impulsy. Sieci takie mają większą pojemność, za którą jednak trzeba zapłacić koniecznością zastosowania skomplikowanego sprzętu."
+  },
+  {
+    "term": "Szerokopasmowy (wideband)",
+    "def": "termin określający nośnik transmisji sygnałów o częstotliwościach wyższych niż standardowy kanał głosowy (3 kHz)."
+  },
+  {
+    "term": "Szerokość pasma (bandwidth)",
+    "def": "zakres częstotliwości przenoszonych przez dany obwód. Obwody analogowe mają zazwyczaj szerokość pasma ograniczoną do częstotliwości, która odpowiada ludzkiemu głosowi (od 300 Hz do 3 kHz). Prostokątne przebiegi sygnałów cyfrowych wymagają wyższych szerokości pasma. Im wyższa prędkość transmisji, tym większe zapotrzebowanie na szerokość pasma. Doskonałymi szerokościami pasma charakteryzują się światłowody i kable koncentryczne."
+  },
+  {
+    "term": "T1",
+    "def": "obwód komunikacyjny o przepustowości 1,544 Mb/s udostępniany przez operatorów międzymiastowych do transmisji głosu i danych. Łącza T1 są zazwyczaj dzielone na dwadzieścia cztery kanały o przepustowości 64 kb/s."
+  },
+  {
+    "term": "TCAM",
+    "def": "system sterowania komunikacją firmy IBM."
+  },
+  {
+    "term": "TCP (Transmission Control Protocol)",
+    "def": "oprogramowanie dzielące dane na pakiety w celu transmisji i łączące na powrót odebrane pakiety, a także zarządzające transmisją pakietów w sieci i odpowiadające za kontrolę błędów."
+  },
+  {
+    "term": "TCP/IP (Transmission Control Protocol/ Internet Protocol)",
+    "def": "zestaw protokołów komunikacyjnych, którego początki sięgają lat siedemdziesiątych, kiedy jego pierwsza wersja została opracowana przez Departament Obrony USA. Ponieważ programy obsługujące te protokoły są dostępne w wielu różnych systemach komputerowych, TCP/IP stał się doskonałą metodą łączenia różnych komputerów poprzez sieci."
+  },
+  {
+    "term": "TDM",
+    "def": "patrz: Multipleksowanie z podziałem czasu"
+  },
+  {
+    "term": "TDR (time domain reflectometry)",
+    "def": "metoda wykrywania stanu zwarcia lub przerwy w obwodzie, polegająca na wysyłaniu przez obwód impulsów o częstotliwościach radiowych. Najdroższe urządzenia potrafią zlokalizować awarię z dokładnością do kilku centymetrów; w przypadku tańszych urządzeń próba pomiaru odległości może być obarczona dużym błędem."
+  },
+  {
+    "term": "Technika światłowodowa (fiber optics)",
+    "def": "metoda transmisji danych, wykorzystująca impulsy świetlne przesyłane przez włókna światłowodów."
+  },
+  {
+    "term": "Technologia klastrowa (clustering)",
+    "def": "architektura łącząca serwery i urządzenia pamięci masowych w celu zwiększenia niezawodności, bezpieczeństwa i wydajności oraz ułatwienia czynności administracyjnych. Urządzenia w systemach klastrowych mogą działać równolegle, a w przypadku awarii jednego z nich przejmować jego funkcje. Technologia klastrowa wymaga, aby wszystkie urządzenia należące do klastra były połączone szybkimi łączami, takimi jak SCSI, Fiber Channel lub Gigabit Ethernet."
+  },
+  {
+    "term": "Telefaks (fax)",
+    "def": "transmisja obrazów składających się z białych i czarnych punktów, a nie z pojedynczych znaków. W starszych urządzeniach używane były sygnały analogowe, nowsze używają sygnałów cyfrowych i umożliwiają współpracę z komputerami i innymi urządzeniami cyfrowymi."
+  },
+  {
+    "term": "Telex",
+    "def": "międzynarodowa usługa przesyłania komunikatów wprowadzona na rynek w USA przez Western Union."
+  },
+  {
+    "term": "TELNET",
+    "def": "protokół emulacji terminalu. Oprogramowanie obsługujące protokół TELNET wchodzi zwykle w skład narzędzi pakietu TCP/IP. Wszystkie programy TELNET standardowo emulują terminal DEC VT-100. Wiele firm udostępnia także emulatory innych terminali."
+  },
+  {
+    "term": "Terminator",
+    "def": "opornik umieszczany na każdym końcu kabla Ethernet (koncentrycznego), zapobiegający odbijaniu się sygnałów i powstawaniu zakłóceń w transmisji. Terminator na jednym końcu jest zwykle uziemiony."
+  },
+  {
+    "term": "Test wydajności (benchmark test)",
+    "def": "program używany do pomiaru szybkości lub przepustowości systemu."
+  },
+  {
+    "term": "TFTP (Trivial File Transfer Protocol)",
+    "def": "uproszczona wersja protokołu FTP, w której możliwa jest transmisja plików, ale nie ma zabezpieczenia hasłem, ani funkcji obsługi katalogów. TFTP jest powiązany z protokołami z rodziny TCP/IP."
+  },
+  {
+    "term": "TIC (Token-Ring Interface Coupler)",
+    "def": "urządzenie firmy IBM umożliwiające bezpośrednie podłączenie kontrolera lub procesora do sieci Token-Ring. Jest to opcjonalny element kilku kontrolerów klastrów terminali i procesorów czołowych firmy IBM."
+  },
+  {
+    "term": "Tłumienie (attenuation)",
+    "def": "mierzone w decybelach zmniejszenie natężenia sygnału przesyłanego przewodowo. Ze wzrostem tłumienia sygnał słabnie."
+  },
+  {
+    "term": "Tłumik echa (echo suppressor)",
+    "def": "urządzenie używane do eliminacji efektu echa w łączach telefonii międzymiastowej. W przypadku transmisji danych w trybie pełnego dupleksu, tłumiki muszą być wyłączone; sygnał odpowiedzi modemu powoduje automatyczne wyłączenie tłumików echa."
+  },
+  {
+    "term": "Token-Ring",
+    "def": "system okablowania i protokołu dostępu, w którym stacje przekazują pakiety w konfiguracji logicznego pierścienia. Ta architektura, opracowana przez IBM, jest opisana w standardzie IEEE 802.5."
+  },
+  {
+    "term": "TOP (Technical Office Protocol)",
+    "def": "implementacja standardów OSI w środowiskach biurowych i projektowych. Protokół TOP, opracowany przez Boeinga i inne firmy, opiera się na specyfikacjach sieci Ethernet."
+  },
+  {
+    "term": "Topologia (topology)",
+    "def": "mapa lub schemat sieci. Fizyczna topologia opisuje sposób ułożenia kabli. Topologia logiczna (elektryczna) opisuje, jaką drogą w sieci przesyłane są komunikaty. topologia gwiazdy (star topology) metoda połączenia sieciowego, w której wszystkie łącza biegną do centralnego węzła."
+  },
+  {
+    "term": "Topologia szynowa (bus topology)",
+    "def": "taka organizacja systemu rozgłaszania, w której wszystkie stacje sieciowe odbierają jednocześnie ten sam komunikat z kabla sieciowego."
+  },
+  {
+    "term": "TP-4 (Transport Protocol 4)",
+    "def": "protokół czwartej warstwy modelu OSI opracowany przez National Bureau of Standards."
+  },
+  {
+    "term": "Traceroute",
+    "def": "program diagnostyczny rozszerzający możliwości programu PING o czasy przepływu danych nie tylko do docelowego hosta, ale również do pośrednich routerów. Program Traceroute jest bardzo pomocnym narzędziem do analizy problemów z usługami internetowymi."
+  },
+  {
+    "term": "Transceiver",
+    "def": "urządzenie o możliwościach nadawania i odbioru."
+  },
+  {
+    "term": "Transmisja równoległa (parallel transmition)",
+    "def": "jednoczesna transmisja bitów w przewodach równoległych. Na przykład bajtowa transmisja równoległa wymaga ośmiu przewodów. Patrz: port szeregowy."
+  },
+  {
+    "term": "TTS (Transaction Tracking System)",
+    "def": "system śledzenia transakcji. Protokół wszelkich czynności związanych z plikami rejestrowany w systemie NetWare."
+  },
+  {
+    "term": "UDP (User Datagram Protocol)",
+    "def": "protokół datagramów użytkownika. Protokół wchodzący w skład rodziny TCP/IP, opisujący sposób, w jaki przesyłane porcje danych docierają do programów użytkowych działających na komputerze docelowym. Standardowo protokół UDP wchodzi w skład oprogramowania warstwy IP."
+  },
+  {
+    "term": "UNIX",
+    "def": "wielozadaniowy system operacyjny z obsługą wielu użytkowników opracowany dla minikomputerów przez koncern AT&T, który zdobył szeroką popularność w środowiskach inżynierskich i naukowych. UNIX stał się również podstawą systemów operacyjnych serwerów plików w sieciach komputerów PC."
+  },
+  {
+    "term": "UNMA (Unified Network Management Architecture)",
+    "def": "firmowa architektura AT&T zgodna z protokołem ISO CMIP."
+  },
+  {
+    "term": "UUCP (UNIX-to-UNIX Copy Program)",
+    "def": "standardowe narzędzie systemu UNIX używane do wymiany informacji pomiędzy dwoma węzłami uniksowymi."
+  },
+  {
+    "term": "Uzgadnianie (handshaking)",
+    "def": "wymiana kodów sterujących lub znaków specjalnych dokonywana w celu sterowania transmisją."
+  },
+  {
+    "term": "Uziemienie (ground)",
+    "def": "punkt styku elektrycznie obojętny."
+  },
+  {
+    "term": "VAN (value added network)",
+    "def": "sieć usług dodanych. Prywatna sieć z komutacją pakietów, której usługi są sprzedawane publicznie. Patrz: PSDN."
+  },
+  {
+    "term": "VC (virtual circuit)",
+    "def": "obwód wirtualny. Logiczne połączenie wykorzystujące protokół PAP pomiędzy urządzeniami DTE i DCE w sieciach X.25. W sieciach tych są obsługiwane komutowane obwody wirtualne (SVC) i stałe obwody wirtualne (PVC). Komutowane obwody wirtualne są podobne do łączy komutowanych w sieciach telefonicznych (połączenie jest nawiązywane tylko na czas połączenia). Z kolei stałe kanały wirtualne odpowiadają liniom dzierżawionym, ponieważ łączą stale ze sobą dwa terminale sieci X.25."
+  },
+  {
+    "term": "VINES (Virtual Networking Software)",
+    "def": "uniksowy system operacyjny firmy Banyan Software."
+  },
+  {
+    "term": "VPN",
+    "def": "patrz: Wirtualna sieć prywatna"
+  },
+  {
+    "term": "VTAM (Virtual Telecommunications Access Method)",
+    "def": "standard oprogramowania IBM działającego na hostach systemu mainframe i współpracującego z programem Network Control Program w celu nawiązania komunikacji pomiędzy hostami i kontrolerami klastrów. Oprócz innych funkcji VTAM definiuje również charakterystyki jednostek LU."
+  },
+  {
+    "term": "WAN (wide area network)",
+    "def": "sieć rozległa. Rodzaj sieci łączącej ze sobą odległe komputery, na obszarze kraju, kontynentu lub nawet na całym świecie."
+  },
+  {
+    "term": "Warstwa aplikacji (application layer)",
+    "def": "najwyższa (siódma) warstwa w modelu OSI. Opisuje sposób, w jaki aplikacje współdziałają z sieciowym systemem operacyjnym."
+  },
+  {
+    "term": "Warstwa fizyczna (Physical layer)",
+    "def": "najniższa warstwa modelu OSI. Obejmuje kabel sieciowy i interfejs sprzętowy, który wysyła i odbiera sygnały."
+  },
+  {
+    "term": "Warstwa funkcjonalno-administracyjna (functional-management layer)",
+    "def": "warstwa komunikacyjna sieci SNA, która formatuje reprezentacje danych."
+  },
+  {
+    "term": "Warstwa łącza (link layer)",
+    "def": "inne określenie drugiej warstwy w architekturze OSI. Patrz warstwa łącza danych."
+  },
+  {
+    "term": "Warstwa łącza danych (data-link layer)",
+    "def": "druga warstwa modelu OSI. Protokoły które działają w tej warstwie, zarządzają przepływem danych, wychodzących z urządzenia sieciowego i odpowiadających za ich bezpieczną transmisję do stacji odbiorczej. warstwa prezentacji (presentation layer) szósta warstwa modelu OSI. Odpowiada za format danych do prezentacji ekranowej i konwertuje niezgodne typy plików."
+  },
+  {
+    "term": "Warstwa sesji (session layer)",
+    "def": "piąta warstwa modelu OSI, definiująca warunki, przy których możliwa jest komunikacja i przesyłanie danych pomiędzy poszczególnymi węzłami sieci. Funkcje tej warstwy są używane do wielu celów, na przykład do określania, która strona może nadawać podczas komunikacji w trybie półdupleksu."
+  },
+  {
+    "term": "Warstwa sieci (network layer)",
+    "def": "trzecia warstwa modelu OSI. Obejmuje logikę i zasady określające ścieżkę, jaką dane mają przebyć w sieci. Nie ma większego znaczenia w małych sieciach lokalnych."
+  },
+  {
+    "term": "Warstwa transportowa (transport layer)",
+    "def": "czwarta warstwa modelu OSI. Oprogramowanie tej warstwy sprawdza integralność i formaty danych przenoszonych w warstwie fizycznej (1), zarządzanych przez warstwę łącza danych (2) i niekiedy kierowanych przez warstwę sieci (3)."
+  },
+  {
+    "term": "WINS (Windows Internet Naming Service)",
+    "def": "opracowany przez Microsoft protokół, wykorzystujący bazę danych nazw stacji klienckich i wiążący te nazwy z adresami IP. Zarządzając połączeniami protokołu NetBIOS poprzez sieć TCP/IP, protokół WINS obsługuje użycie protokołów CIFS (SMB) i NetBIOS z protokołem TCP/IP (RFC1001-1002) oraz system operacyjny Windows NT Microsoftu."
+  },
+  {
+    "term": "Wirtualna sieć prywatna (virtual private network – VPN)",
+    "def": "technologia wykorzystująca uwierzytelnianie, szyfrowanie i podział danych na pakiety do transmisji prywatnych danych w sieciach publicznych. Sieci VPN umożliwiają biurom oddziałowym i telepracownikom bezpieczny dostęp do korporacyjnych sieci LAN lub WAN. Szyfrowanie uniemożliwia postronnym osobom przechwycenie danych przesyłanych w sieciach VPN."
+  },
+  {
+    "term": "Wtórnik (repeater)",
+    "def": "inaczej wzmacniacz lub repetytor. Urządzenie wzmacniające i regenerujące sygnały, przez co możliwa jest ich transmisja na dalsze odległości."
+  },
+  {
+    "term": "Wtórnik buforowany (buffered repeater)",
+    "def": "urządzenie wzmacniające i regenerujące sygnały, które umożliwiają transmisję na dalekie odległości. Wtórniki buforowane mają również możliwość sterowania przepływem informacji w celu zapobieżenia kolizjom."
+  },
+  {
+    "term": "Wyposażenie klienta (customer premises equipment – CPE)",
+    "def": "ogólne określenie aparatów telefonicznych, komputerów, central i innego sprzętu, znajdującego się w sieci telefonicznej po stronie użytkownika. Termin wprowadzony w postępowaniu sądowym Computer Inquiry II komisji Federal Communications Commision."
+  },
+  {
+    "term": "X Window",
+    "def": "sieciowy, system okienkowy, udostępniający interfejs programistyczny dla wyświetlania na ekranie graficznych okien. System X Window pozwala na wyświetlanie na dowolnej stacji grafiki tworzonej na innej stacji w sieci."
+  },
+  {
+    "term": "X.25",
+    "def": "standard opisujący transmisję danych w sieciach X.25. Sieci X.25 charakteryzują się wysoką niezawodnością. Protokoły sieci Frame Relay przesyłają dane kontroli błędów z każdego węzła do punktu końcowego, co znacząco zwiększa przepustowość w każdym węźle sieci."
+  },
+  {
+    "term": "X.400",
+    "def": "standard CCIT opisujący międzynarodowy system dystrybucji poczty elektronicznej."
+  },
+  {
+    "term": "X.500",
+    "def": "opracowany przez CCIT standard usług katalogowych, opisujący organizację katalogów plików rozrzuconych po różnych systemach."
+  },
+  {
+    "term": "X/Open",
+    "def": "konsorcjum dostawców branży komputerowej, stawiające sobie za cel określenie otwartej platformy systemowej opartej na systemie UNIX. xDSL ogólne oznaczenie całej rodziny technologii cyfrowych linii abonenckich (Digital Subscriber Line – DSL) o prędkościach od 128 kb/s do 52 Mb/s (zależnie od odległości abonenta od centrali)."
+  },
+  {
+    "term": "XNS (Xerox Network Services)",
+    "def": "wielowarstwowy system protokołów opracowany przez Xeroxa i adaptowany (przynajmniej w części) przez Novella i innych dostawców. XNS jest jednym z wielu protokołów rozproszonych systemów plików, umożliwiających korzystanie z plików i urządzeń peryferyjnych udostępnianych w sieci, tak jakby były one dostępne lokalnie."
+  },
+  {
+    "term": "Zapis lustrzany (disk mirroring)",
+    "def": "odporna na awarie technika zapisu danych, w której dane zapisywane są równocześnie na dwóch dyskach przy użyciu tego samego sterownika."
+  },
+  {
+    "term": "Zapis ukośny (helical scan)",
+    "def": "metoda nagrywania danych na taśmę, w której używa się wirującej głowicy zapisująco-odczytującej i ukośnych ścieżek. Szybko wirująca głowica zapisuje zagęszczony obraz magnetyczny bez konieczności szybkiego przesuwu taśmy powodującego jej odkształcenia."
+  },
+  {
+    "term": "Zarządzanie awariami (fault management)",
+    "def": "jedna z pięciu podstawowych kategorii zarządzania siecią zdefiniowanych przez Międzynarodową Organizację Normalizacyjną (patrz: ISO). Zarządzanie awariami ma na celu wykrycie, wyizolowanie i usunięcie awarii sieci."
+  },
+  {
+    "term": "Złącze BNC (BNC connector)",
+    "def": "małe złącze kończące kabel koncentryczny z mocowaniem bagnetowym. Po włożeniu do gniazda należy je obrócić o 180° w celu zablokowania."
+  },
+  {
+    "term": "Złącze N (N connector)",
+    "def": "złącze o dużej średnicy używane z grubym kablem ethernetowym."
+  },
+  {
+    "term": "Złącze T (T-connector)",
+    "def": "Złącze koncentryczne w kształcie litery T, łączące dwa cienkie kable koncentryczne i będące jednocześnie wtyczką do karty sieciowej."
+  },
+  {
+    "term": "Znacznik (mark)",
+    "def": "stan sygnalizacji odpowiadający logicznej jedynce."
+  },
+  {
+    "term": "Znak sterujący (control character)",
+    "def": "znak używany do celów specjalnych; najczęściej nie jest wyświetlany, ani drukowany, ale wykonuje określone funkcje, na przykład może to być przesunięcie papieru w drukarce, wygaszenie ekranu lub uzgodnienie pomiędzy urządzeniami komunikacyjnymi w celu sterowania przepływem danych."
+  },
+  {
+    "term": "Znak synchronizacji (sync character)",
+    "def": "znak (dwa lub więcej w protokole bisync) wysyłany przez stację nadawczą w celu synchronizacji zegarów w stacji nadawczej i odbiorczej."
+  },
+  {
+    "term": "Zniekształcenie (distortion)",
+    "def": "każda zmiana transmitowanego sygnału. Zniekształcenia mogą być wprowadzane przez przesłuchy, opóźnienia, tłumienie i inne czynniki."
+  },
+  {
+    "term": "Zworka (jumper)",
+    "def": "plastikowo-metalowe złącze wsuwane na dwa lub więcej styków elektrycznych w celu określenia pewnej konfiguracji działania."
+  }
+]
