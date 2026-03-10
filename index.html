@@ -1,873 +1,52 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WordWall — Vocabulary Wallpaper</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<meta name="viewport" content="width=390px, initial-scale=1.0">
+<title>Wallpaper</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
-
-:root {
-  --ink: #1a1209;
-  --paper: #f5efe3;
-  --aged: #e8dcc8;
-  --accent: #8b4513;
-  --gold: #c8963c;
-  --muted: #9a8a74;
-  --faint: #d4c8b4;
-  --red: #922b21;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family:'JetBrains Mono',monospace;
-  background:var(--paper);
-  color:var(--ink);
-  min-height:100vh;
-  position:relative;
-}
-
-body::before {
-  content:'';
-  position:fixed; inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events:none; z-index:0;
-}
-
-.container {
-  position:relative; z-index:1;
-  max-width:860px;
-  margin:0 auto;
-  padding:56px 32px 80px;
-}
-
-header {
-  text-align:center;
-  margin-bottom:56px;
-  border-bottom:1.5px solid var(--faint);
-  padding-bottom:36px;
-}
-
-.ornament {
-  font-size:1.2rem;
-  color:var(--gold);
-  letter-spacing:0.5em;
-  display:block;
-  margin-bottom:10px;
-}
-
-h1 {
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.6rem,7vw,4.5rem);
-  font-weight:300;
-  letter-spacing:0.06em;
-  line-height:1;
-  color:var(--ink);
-}
-
-h1 em { font-style:italic; color:var(--accent); }
-
-.subtitle {
-  margin-top:12px;
-  font-size:0.68rem;
-  color:var(--muted);
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-}
-
-/* Steps */
-.step-block {
-  margin-bottom:40px;
-  padding:28px 32px;
-  border:1px solid var(--faint);
-  background:rgba(255,255,255,0.45);
-  position:relative;
-}
-
-.step-block::before {
-  content:'';
-  position:absolute;
-  top:0; left:0;
-  width:3px; height:100%;
-  background:var(--faint);
-  transition:background 0.4s;
-}
-
-.step-block.active::before { background:var(--gold); }
-.step-block.done::before { background:var(--accent); }
-
-.step-label {
-  font-size:0.62rem;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:4px;
-}
-
-.step-title {
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  font-weight:600;
-  color:var(--ink);
-  margin-bottom:18px;
-}
-
-/* Upload */
-.upload-zone {
-  border:1.5px dashed var(--faint);
-  padding:40px 24px;
-  text-align:center;
-  cursor:pointer;
-  position:relative;
-  transition:all 0.25s;
-  background:rgba(245,239,227,0.5);
-}
-
-.upload-zone:hover, .upload-zone.over {
-  border-color:var(--gold);
-  background:rgba(200,150,60,0.04);
-}
-
-.upload-zone input[type=file] {
-  position:absolute; inset:0;
-  opacity:0; cursor:pointer;
-  width:100%; height:100%;
-}
-
-.upload-icon { font-size:2rem; margin-bottom:8px; }
-
-.upload-text { font-size:0.75rem; color:var(--muted); line-height:1.9; }
-.upload-text strong { color:var(--accent); }
-
-.format-note {
-  margin-top:14px;
-  padding:12px 16px;
-  background:rgba(139,69,19,0.04);
-  border-left:2px solid var(--gold);
-  font-size:0.7rem;
-  color:var(--muted);
-  line-height:1.9;
-  text-align:left;
-}
-
-.format-note code {
-  font-family:'JetBrains Mono',monospace;
-  background:rgba(139,69,19,0.08);
-  color:var(--accent);
-  padding:1px 5px;
-}
-
-#parse-status {
-  margin-top:10px;
-  font-size:0.7rem;
-  color:var(--muted);
-  min-height:16px;
-}
-
-.progress-bar { height:2px; background:var(--faint); margin-top:8px; display:none; }
-.progress-fill { height:100%; background:linear-gradient(90deg,var(--gold),var(--accent)); width:0%; transition:width 0.3s; }
-
-/* Step 2-4 hidden by default */
-#step2,#step3,#step4 { display:none; }
-
-.entries-meta {
-  display:flex; align-items:center; gap:12px;
-  margin-bottom:12px; flex-wrap:wrap;
-}
-
-.pill {
-  font-size:0.65rem;
-  padding:3px 10px;
-  border:1px solid var(--gold);
-  color:var(--accent);
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-}
-
-.entries-list {
-  border:1px solid var(--faint);
-  max-height:240px;
-  overflow-y:auto;
-  scrollbar-width:thin;
-  scrollbar-color:var(--faint) transparent;
-}
-
-.entry-row {
-  display:grid;
-  grid-template-columns:200px 1fr auto;
-  gap:12px;
-  align-items:center;
-  padding:8px 12px;
-  border-bottom:1px solid var(--faint);
-  font-size:0.7rem;
-  transition:background 0.15s;
-}
-
-.entry-row:last-child { border-bottom:none; }
-.entry-row:hover { background:rgba(200,150,60,0.04); }
-.e-term { color:var(--accent); font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.e-def { color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-
-.e-del {
-  cursor:pointer; background:none;
-  border:1px solid transparent;
-  color:var(--muted);
-  font-family:'JetBrains Mono',monospace;
-  font-size:0.65rem;
-  padding:2px 6px;
-  transition:all 0.2s;
-}
-.e-del:hover { border-color:var(--red); color:var(--red); }
-
-/* Buttons */
-.btn {
-  font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;
-  letter-spacing:0.08em;
-  padding:9px 20px;
-  cursor:pointer;
-  border:1.5px solid;
-  transition:all 0.2s;
-  text-transform:uppercase;
-}
-
-.btn-primary { background:var(--accent); border-color:var(--accent); color:var(--paper); }
-.btn-primary:hover { background:#7a3a10; }
-.btn-outline { background:transparent; border-color:var(--faint); color:var(--ink); }
-.btn-outline:hover { border-color:var(--accent); color:var(--accent); }
-.btn:disabled { opacity:0.4; cursor:not-allowed; }
-
-.btn-row { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; align-items:center; }
-
-/* Theme swatches */
-.theme-row { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 20px; }
-
-.theme-swatch {
-  width:32px; height:32px;
-  border:2px solid transparent;
-  cursor:pointer;
-  transition:all 0.2s;
-  position:relative;
-}
-
-.theme-swatch.sel { border-color:var(--ink); transform:scale(1.15); }
-
-.theme-swatch::after {
-  content:attr(data-name);
-  position:absolute;
-  bottom:-16px; left:50%;
-  transform:translateX(-50%);
-  font-size:0.5rem;
-  color:var(--muted);
-  white-space:nowrap;
-  letter-spacing:0.04em;
-  font-family:'JetBrains Mono',monospace;
-}
-
-/* Wallpaper preview */
-.preview-wrap {
-  display:flex; gap:28px;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  margin-top:8px;
-}
-
-.phone-frame { flex-shrink:0; width:168px; }
-
-.phone-shell {
-  border:2px solid #555;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 8px 28px rgba(0,0,0,0.15), inset 0 0 0 1px rgba(255,255,255,0.06);
-  aspect-ratio:9/19.5;
-  position:relative;
-  cursor:pointer;
-  transition:transform 0.3s;
-}
-
-.phone-shell:hover { transform:scale(1.03); }
-.phone-shell canvas { width:100%; height:100%; object-fit:cover; display:block; }
-
-.phone-notch-bar {
-  position:absolute; top:0; left:0; right:0; height:28px;
-  display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(180deg,rgba(0,0,0,0.45) 0%,transparent 100%);
-  pointer-events:none;
-}
-
-.phone-notch { width:60px; height:10px; background:#000; border-radius:99px; }
-.tap-hint { text-align:center; font-size:0.6rem; color:var(--muted); margin-top:6px; letter-spacing:0.1em; text-transform:uppercase; }
-
-.preview-info { flex:1; min-width:200px; }
-
-.cwd-term {
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem; font-style:italic;
-  color:var(--accent); margin-bottom:4px;
-}
-
-.cwd-def { font-size:0.7rem; color:var(--muted); line-height:1.8; }
-
-.hour-box {
-  border:1px solid var(--faint);
-  padding:12px 16px;
-  margin-top:14px;
-  background:rgba(245,239,227,0.7);
-}
-
-.hour-box .label { font-size:0.6rem; color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:3px; }
-.hour-box .value { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--ink); }
-.hour-box .sub { font-size:0.63rem; color:var(--muted); margin-top:2px; }
-
-/* Guide cards */
-.guide-card {
-  border:1px solid var(--faint);
-  padding:22px 26px;
-  background:rgba(255,255,255,0.35);
-  margin-bottom:16px;
-}
-
-.guide-card h3 {
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.05rem; font-weight:600;
-  margin-bottom:12px;
-  padding-bottom:8px;
-  border-bottom:1px solid var(--faint);
-  color:var(--accent);
-  letter-spacing:0.04em;
-}
-
-ol.guide-steps { counter-reset:gs; list-style:none; display:flex; flex-direction:column; gap:10px; }
-
-ol.guide-steps li {
-  counter-increment:gs;
-  display:flex; gap:12px;
-  font-size:0.72rem;
-  color:var(--ink);
-  line-height:1.75;
-}
-
-ol.guide-steps li::before {
-  content:counter(gs);
-  min-width:18px; height:18px;
-  border:1px solid var(--muted);
-  display:flex; align-items:center; justify-content:center;
-  font-size:0.62rem; color:var(--muted);
-  flex-shrink:0; margin-top:3px;
-}
-
-ol.guide-steps li strong { color:var(--accent); }
-ol.guide-steps li code {
-  font-family:'JetBrains Mono',monospace;
-  background:rgba(139,69,19,0.07);
-  color:var(--accent);
-  padding:1px 5px;
-  font-size:0.68rem;
-}
-
-.url-display {
-  flex:1;
-  font-family:'JetBrains Mono',monospace;
-  font-size:0.68rem; color:var(--accent);
-  background:rgba(139,69,19,0.05);
-  border:1px solid var(--faint);
-  padding:7px 10px;
-  word-break:break-all; cursor:pointer;
-  min-width:200px; transition:border-color 0.2s;
-  margin-top:8px;
-}
-
-.url-display:hover { border-color:var(--gold); }
-
-.info-box {
-  background:rgba(200,150,60,0.05);
-  border-left:2px solid var(--gold);
-  padding:12px 16px;
-  font-size:0.7rem; color:var(--muted);
-  line-height:1.9; margin-top:10px;
-}
-
-.info-box code {
-  font-family:'JetBrains Mono',monospace;
-  color:var(--accent);
-  background:rgba(139,69,19,0.07);
-  padding:1px 4px;
-}
-
-hr.fancy {
-  border:none; text-align:center;
-  margin:40px 0; color:var(--muted);
-  font-size:0.8rem; letter-spacing:0.4em;
-}
-hr.fancy::before { content:'· · ·'; }
-
-#toast {
-  position:fixed;
-  bottom:24px; left:50%;
-  transform:translateX(-50%) translateY(80px);
-  background:var(--accent);
-  color:var(--paper);
-  padding:8px 22px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:0.7rem;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-  z-index:9999; pointer-events:none;
-}
-
-#toast.show { transform:translateX(-50%) translateY(0); }
-
-@media(max-width:560px){
-  .container { padding:28px 16px 56px; }
-  .step-block { padding:20px 16px; }
-  .entry-row { grid-template-columns:110px 1fr auto; }
-  .preview-wrap { flex-direction:column; align-items:center; }
-}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body {
+    width: 390px;
+    height: 844px;
+    overflow: hidden;
+    background: #000;
+  }
+  canvas {
+    display: block;
+    width: 390px;
+    height: 844px;
+  }
 </style>
 </head>
 <body>
-
-<div id="toast">OK!</div>
-
-<div class="container">
-
-  <header>
-    <span class="ornament">✦ ✦ ✦</span>
-    <h1>Word<em>Wall</em></h1>
-    <p class="subtitle">PDF Glossary &rarr; iPhone Wallpaper &rarr; Apple Shortcuts</p>
-  </header>
-
-  <!-- STEP 1 -->
-  <div class="step-block active" id="sb1">
-    <p class="step-label">Step 1</p>
-    <h2 class="step-title">Upload your PDF glossary</h2>
-
-    <div class="upload-zone" id="upload-zone">
-      <input type="file" id="pdf-input" accept=".pdf,.docx">
-      <div class="upload-icon">&#128214;</div>
-      <div class="upload-text">
-        <strong>Click or drag &amp; drop</strong> your PDF or DOCX here<br>
-        <small>Processed entirely in-browser &mdash; nothing is uploaded anywhere</small>
-      </div>
-    </div>
-
-    <div class="format-note">
-      Supported file types: <code>.pdf</code> and <code>.docx</code> (Word 2007+)<br>
-      Supported entry formats inside the file:<br>
-      <code>Term - definition sentence here</code><br>
-      <code>Term &#8212; definition sentence here</code><br>
-      <code>Term (abbreviation)</code> followed by definition on next line<br>
-      Note: <code>.doc</code> (old Word format) is not supported &mdash; save as <code>.docx</code> first.
-    </div>
-
-    <div id="parse-status"></div>
-    <div class="progress-bar" id="prog-bar">
-      <div class="progress-fill" id="prog-fill"></div>
-    </div>
-  </div>
-
-  <!-- STEP 2 -->
-  <div class="step-block" id="step2">
-    <p class="step-label">Step 2</p>
-    <h2 class="step-title">Review entries</h2>
-    <div class="entries-meta">
-      <span class="pill" id="entry-count">0 entries</span>
-      <span style="font-size:0.65rem;color:var(--muted)">Click &times; to remove incorrectly parsed rows</span>
-    </div>
-    <div class="entries-list" id="entries-list"></div>
-    <div class="btn-row">
-      <button class="btn btn-primary" onclick="showWallpaperStep()">Generate wallpaper &rarr;</button>
-      <button class="btn btn-outline" onclick="shuffleAndRedraw()">&#8635; Shuffle</button>
-    </div>
-  </div>
-
-  <!-- STEP 3 -->
-  <div class="step-block" id="step3">
-    <p class="step-label">Step 3</p>
-    <h2 class="step-title">Wallpaper preview</h2>
-
-    <p style="font-size:0.7rem;color:var(--muted);margin-bottom:4px">Choose a theme. The term changes automatically each hour.</p>
-
-    <div class="theme-row" id="theme-row">
-      <div class="theme-swatch sel" data-theme="midnight" data-name="Midnight"
-           style="background:linear-gradient(150deg,#0d0d1a,#1a1030)"></div>
-      <div class="theme-swatch" data-theme="parchment" data-name="Parchment"
-           style="background:linear-gradient(150deg,#f0e8d5,#e0d4bc)"></div>
-      <div class="theme-swatch" data-theme="forest" data-name="Forest"
-           style="background:linear-gradient(150deg,#0a1a10,#0f2218)"></div>
-      <div class="theme-swatch" data-theme="crimson" data-name="Crimson"
-           style="background:linear-gradient(150deg,#1a0808,#280d0d)"></div>
-      <div class="theme-swatch" data-theme="slate" data-name="Slate"
-           style="background:linear-gradient(150deg,#1a1e2a,#0f1318)"></div>
-    </div>
-
-    <div class="preview-wrap">
-      <div class="phone-frame">
-        <div class="phone-shell" onclick="downloadWallpaper()" title="Click to download">
-          <canvas id="wc" width="1170" height="2532"></canvas>
-          <div class="phone-notch-bar"><div class="phone-notch"></div></div>
-        </div>
-        <p class="tap-hint">&#8595; tap to download</p>
-      </div>
-
-      <div class="preview-info">
-        <div style="margin-bottom:12px">
-          <div class="cwd-term" id="cwd-term">&#8212;</div>
-          <div class="cwd-def" id="cwd-def"></div>
-        </div>
-
-        <div class="hour-box">
-          <div class="label">Current hour slot</div>
-          <div class="value" id="hour-val">&#8212;:00</div>
-          <div class="sub" id="next-change">Changes every hour</div>
-        </div>
-
-        <div class="btn-row">
-          <button class="btn btn-primary" onclick="downloadWallpaper()">&#8595; Download PNG</button>
-          <button class="btn btn-outline" onclick="shuffleAndRedraw()">&#8635; Shuffle</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="fancy">
-
-  <!-- STEP 4 -->
-  <div class="step-block" id="step4">
-    <p class="step-label">Step 4</p>
-    <h2 class="step-title">Set up Apple Shortcuts</h2>
-
-    <div class="guide-card">
-      <h3>How it works</h3>
-      <p style="font-size:0.71rem;color:var(--muted);line-height:1.9;margin-bottom:10px">
-        Once deployed to GitHub Pages, your site serves a fresh vocabulary wallpaper
-        at its URL. The page auto-selects a term based on the current hour of the day &mdash;
-        so every hour Shortcuts visits the URL, it gets a different wallpaper image.
-      </p>
-      <div class="info-box">
-        The <code>words.json</code> file holds all your vocabulary pairs.
-        The page renders the wallpaper as a canvas element and the Shortcut
-        uses <strong>Take Screenshot</strong> or <strong>Get Contents of URL</strong> + <strong>Set Wallpaper</strong>.
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <h3>1 &mdash; Deploy to GitHub Pages</h3>
-      <ol class="guide-steps">
-        <li>Create a new repository on <strong>github.com</strong> (e.g. <code>my-wordwall</code>).</li>
-        <li>Upload <strong>this <code>index.html</code></strong> file and the <strong><code>words.json</code></strong> file you download below into the repo root.</li>
-        <li>Go to <strong>Settings &rarr; Pages</strong>, set source to branch <code>main</code>, folder <code>/ (root)</code> and save.</li>
-        <li>After a minute your site will be live at <code>https://YOUR-USERNAME.github.io/my-wordwall/</code></li>
-      </ol>
-    </div>
-
-    <div class="guide-card">
-      <h3>2 &mdash; Create the Shortcut</h3>
-      <ol class="guide-steps">
-        <li>Open the <strong>Shortcuts</strong> app on your iPhone.</li>
-        <li>Tap <strong>+</strong> to create a new Shortcut.</li>
-        <li>Add action <strong>"Get Contents of URL"</strong> and paste your GitHub Pages URL (the root <code>/</code> page).</li>
-        <li>Add action <strong>"Take Screenshot"</strong> &mdash; <em>or</em> if the previous step returns an image directly, skip this.</li>
-        <li>Add action <strong>"Set Wallpaper"</strong> &mdash; choose <em>Lock Screen</em>, <em>Home Screen</em>, or both. Use the result of the previous step as the image.</li>
-        <li>Tap the shortcut name at the top &rarr; <strong>Add to Automation</strong>.</li>
-        <li>Choose <strong>"Time of Day"</strong> &rarr; set it to repeat <strong>every 1 hour</strong> starting 12:00 AM.</li>
-        <li>Disable <strong>"Ask Before Running"</strong> so it runs silently in the background.</li>
-      </ol>
-      <div class="info-box" style="margin-top:14px">
-        <strong>Tip:</strong> For the cleanest result, use <code>Get Contents of URL</code> pointing to your GitHub Pages URL.
-        The page will render and your Shortcut can take a screenshot, then set it as wallpaper.
-        Alternatively, download the PNG manually each time using the Download button above and set it via Photos.
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <h3>3 &mdash; Download words.json for your repo</h3>
-      <p style="font-size:0.7rem;color:var(--muted);line-height:1.9;margin-bottom:10px">
-        After uploading your PDF and reviewing the entries, download this file and commit it
-        to your GitHub repo alongside <code>index.html</code>. The page will auto-load it on every visit.
-      </p>
-      <div class="btn-row">
-        <button class="btn btn-primary" id="dl-json-btn" onclick="downloadJson()" disabled>&#8595; Download words.json</button>
-      </div>
-      <div class="url-display" id="github-url" onclick="copyThisUrl(this)">
-        https://YOUR-USERNAME.github.io/my-wordwall/
-      </div>
-      <p style="font-size:0.62rem;color:var(--muted);margin-top:6px">&#8593; Edit this URL after deploying, then click to copy</p>
-    </div>
-
-  </div>
-
-</div>
-
+<canvas id="c" width="1170" height="2532"></canvas>
 <script>
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-// ── THEMES ──────────────────────────────────────────────────
-const THEMES = {
-  midnight: {
-    bg1:'#0d0d1a', bg2:'#1a1030', bg3:'#0a0a14',
-    termColor:'#e8c97e', defColor:'#b0a8d0',
-    lineColor:'rgba(232,201,126,0.22)', dotColor:'rgba(232,201,126,0.1)',
-    indexColor:'rgba(232,201,126,0.35)', watermarkColor:'rgba(255,255,255,0.04)'
-  },
-  parchment: {
-    bg1:'#f0e8d5', bg2:'#e8dcc4', bg3:'#dfd3b8',
-    termColor:'#7a3010', defColor:'#5a4030',
-    lineColor:'rgba(122,48,16,0.18)', dotColor:'rgba(122,48,16,0.07)',
-    indexColor:'rgba(122,48,16,0.28)', watermarkColor:'rgba(90,64,48,0.05)'
-  },
-  forest: {
-    bg1:'#0a1a10', bg2:'#0f2218', bg3:'#071410',
-    termColor:'#7ec87e', defColor:'#9ab89a',
-    lineColor:'rgba(126,200,126,0.18)', dotColor:'rgba(126,200,126,0.08)',
-    indexColor:'rgba(126,200,126,0.32)', watermarkColor:'rgba(126,200,126,0.04)'
-  },
-  crimson: {
-    bg1:'#1a0808', bg2:'#280d0d', bg3:'#100505',
-    termColor:'#e87e7e', defColor:'#c8a0a0',
-    lineColor:'rgba(232,126,126,0.2)', dotColor:'rgba(232,126,126,0.09)',
-    indexColor:'rgba(232,126,126,0.3)', watermarkColor:'rgba(232,126,126,0.04)'
-  },
-  slate: {
-    bg1:'#1a1e2a', bg2:'#0f1318', bg3:'#0d1016',
-    termColor:'#7eb4e8', defColor:'#9aacc0',
-    lineColor:'rgba(126,180,232,0.2)', dotColor:'rgba(126,180,232,0.09)',
-    indexColor:'rgba(126,180,232,0.32)', watermarkColor:'rgba(126,180,232,0.04)'
-  }
+const THEME = {
+  bg1:'#0d0d1a', bg2:'#1a1030', bg3:'#0a0a14',
+  termColor:'#e8c97e', defColor:'#b0a8d0',
+  lineColor:'rgba(232,201,126,0.22)', dotColor:'rgba(232,201,126,0.1)',
+  indexColor:'rgba(232,201,126,0.35)', watermarkColor:'rgba(255,255,255,0.04)'
 };
 
-let entries = [];
-let currentTheme = 'midnight';
-let currentEntry = null;
-
-// ── UPLOAD ─────────────────────────────────────────────────
-const zone = document.getElementById('upload-zone');
-const input = document.getElementById('pdf-input');
-
-zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('over'); });
-zone.addEventListener('dragleave', () => zone.classList.remove('over'));
-zone.addEventListener('drop', e => {
-  e.preventDefault(); zone.classList.remove('over');
-  const f = e.dataTransfer.files[0];
-  if (f) handleFile(f);
-});
-input.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
-
-function handleFile(file) {
-  const name = file.name.toLowerCase();
-  if (name.endsWith('.pdf')) processPdf(file);
-  else if (name.endsWith('.docx')) processDocx(file);
-  else { setStatus('Unsupported file type. Please use .pdf or .docx'); }
-}
-
-async function processPdf(file) {
-  setStatus('Reading PDF…');
-  showProg(true); setProg(10);
-
-  const ab = await file.arrayBuffer();
-  setProg(30);
-  const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
-  setProg(50);
-
-  let fullText = '';
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    let lastY = null;
-    for (const item of content.items) {
-      const y = item.transform[5];
-      if (lastY !== null && Math.abs(y - lastY) > 4) fullText += '\n';
-      fullText += item.str;
-      lastY = y;
-    }
-    fullText += '\n';
-    setProg(50 + Math.round((i / pdf.numPages) * 42));
+function wrapText(ctx, text, maxW) {
+  const words = text.split(' ');
+  const lines = [];
+  let line = '';
+  for (const w of words) {
+    const test = line ? line + ' ' + w : w;
+    if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
+    else line = test;
   }
-
-  setProg(95);
-  entries = parseGlossary(fullText);
-  setProg(100);
-
-  renderEntries();
-  document.getElementById('step2').style.display = 'block';
-  document.getElementById('step4').style.display = 'block';
-  document.getElementById('dl-json-btn').disabled = entries.length === 0;
-
-  setStatus(`\u2713 Found ${entries.length} entries`);
-  setTimeout(() => showProg(false), 700);
-  document.getElementById('sb1').classList.remove('active');
-  document.getElementById('sb1').classList.add('done');
+  if (line) lines.push(line);
+  return lines;
 }
 
-// ── DOCX ───────────────────────────────────────────────────
-async function processDocx(file) {
-  setStatus('Reading DOCX…');
-  showProg(true); setProg(20);
-
-  const ab = await file.arrayBuffer();
-  setProg(50);
-
-  const result = await mammoth.extractRawText({ arrayBuffer: ab });
-  setProg(85);
-
-  const text = result.value;
-  entries = parseGlossary(text);
-  setProg(100);
-
-  renderEntries();
-  document.getElementById('step2').style.display = 'block';
-  document.getElementById('step4').style.display = 'block';
-  document.getElementById('dl-json-btn').disabled = entries.length === 0;
-
-  setStatus(`\u2713 Found ${entries.length} entries`);
-  setTimeout(() => showProg(false), 700);
-  document.getElementById('sb1').classList.remove('active');
-  document.getElementById('sb1').classList.add('done');
-}
-
-
-function parseGlossary(text) {
-  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-  const results = [];
-
-  // Pattern 1: explicit dash / em-dash separator on same line
-  // e.g.  "ACK  znak sterujący potwierdzenia"
-  // or    "Adres (address) jednoznaczna lokalizacja"
-  // or    "Term - definition"
-  const dashRe = /^(.{1,80}?)\s+[–—\-]\s+(.{8,})$/;
-
-  // We walk line by line, collecting term + following definition lines
-  let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
-
-    // Skip page/section headers
-    if (line.match(/^Glosariusz/) || line.length < 2) { i++; continue; }
-
-    // Try inline dash match
-    const dm = line.match(dashRe);
-    if (dm && dm[1].length < 80 && dm[2].length > 8) {
-      results.push({ term: dm[1].trim(), def: dm[2].trim() });
-      i++;
-      continue;
-    }
-
-    // Detect term line: relatively short, not ending with comma/period mid-sentence
-    const isTermCandidate = (
-      line.length >= 2 &&
-      line.length <= 100 &&
-      !line.match(/^\d+$/) &&
-      !line.match(/^[a-z]/) // don't start with lowercase (continuation line)
-    );
-
-    if (isTermCandidate) {
-      // Collect definition: next lines that look like continuation
-      const defParts = [];
-      let j = i + 1;
-      while (j < lines.length) {
-        const next = lines[j];
-        // Stop if next line is another term candidate and we have enough def already
-        if (
-          defParts.length > 0 &&
-          defParts.join(' ').length > 20 &&
-          next.length < 100 &&
-          !next.match(/^[a-z]/) &&
-          !next.match(/^\(/)
-        ) break;
-        defParts.push(next);
-        j++;
-        if (defParts.join(' ').length > 600) break; // cap definition length
-      }
-      const def = defParts.join(' ').trim();
-      if (def.length > 15) {
-        results.push({ term: line, def });
-        i = j;
-        continue;
-      }
-    }
-    i++;
-  }
-
-  // Deduplicate
-  const seen = new Set();
-  return results.filter(e => {
-    const k = e.term.toLowerCase().slice(0, 40);
-    if (seen.has(k)) return false;
-    seen.add(k); return true;
-  });
-}
-
-// ── ENTRIES UI ─────────────────────────────────────────────
-function renderEntries() {
-  const list = document.getElementById('entries-list');
-  list.innerHTML = '';
-  document.getElementById('entry-count').textContent = `${entries.length} entries`;
-  entries.forEach((e, idx) => {
-    const row = document.createElement('div');
-    row.className = 'entry-row';
-    row.innerHTML = `
-      <span class="e-term" title="${esc(e.term)}">${esc(e.term)}</span>
-      <span class="e-def" title="${esc(e.def)}">${esc(e.def)}</span>
-      <button class="e-del" onclick="deleteEntry(${idx})">&#215;</button>`;
-    list.appendChild(row);
-  });
-}
-
-function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
-function deleteEntry(idx) {
-  entries.splice(idx, 1);
-  renderEntries();
-  document.getElementById('dl-json-btn').disabled = entries.length === 0;
-  if (currentEntry) drawWallpaper(getHourEntry() || entries[0]);
-}
-
-// ── WALLPAPER STEP ─────────────────────────────────────────
-function getHourEntry() {
-  if (!entries.length) return null;
-  return entries[new Date().getHours() % entries.length];
-}
-
-function showWallpaperStep() {
-  document.getElementById('step3').style.display = 'block';
-  document.getElementById('step2').classList.add('done');
-  const e = getHourEntry();
-  currentEntry = e;
-  if (e) { drawWallpaper(e); updatePreviewText(e); }
-  updateClock();
-}
-
-function shuffleAndRedraw() {
-  if (!entries.length) return;
-  currentEntry = entries[Math.floor(Math.random() * entries.length)];
-  drawWallpaper(currentEntry);
-  updatePreviewText(currentEntry);
-}
-
-function updatePreviewText(e) {
-  document.getElementById('cwd-term').textContent = e.term;
-  document.getElementById('cwd-def').textContent = e.def;
-}
-
-function updateClock() {
-  const now = new Date();
-  const h = now.getHours(), m = now.getMinutes();
-  document.getElementById('hour-val').textContent = `${String(h).padStart(2,'0')}:00`;
-  document.getElementById('next-change').textContent = `Next change in ${60 - m} min`;
-  setTimeout(updateClock, 30000);
-}
-
-// ── CANVAS ─────────────────────────────────────────────────
-function drawWallpaper(entry) {
-  const canvas = document.getElementById('wc');
+function drawWallpaper(entry, total, index) {
+  const canvas = document.getElementById('c');
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
-  const t = THEMES[currentTheme];
+  const t = THEME;
 
   // Background
   const gr = ctx.createLinearGradient(0, 0, W * 0.4, H);
@@ -881,29 +60,23 @@ function drawWallpaper(entry) {
   ctx.fillStyle = t.dotColor;
   for (let x = 72; x < W; x += 90) {
     for (let y = 72; y < H; y += 90) {
-      ctx.beginPath();
-      ctx.arc(x, y, 1.8, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, 1.8, 0, Math.PI * 2); ctx.fill();
     }
   }
 
   // Vertical lines
-  ctx.strokeStyle = t.lineColor;
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1;
   for (let x = 0; x < W; x += 180) {
     ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
   }
 
-  const pad = 100, cX = W / 2;
-
-  // Center vertical position — placed slightly above middle
-  const centerY = H * 0.44;
+  const pad = 100, cX = W / 2, centerY = H * 0.44;
 
   // Top rule
   ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1.5;
   ctx.beginPath(); ctx.moveTo(pad, centerY - 260); ctx.lineTo(W - pad, centerY - 260); ctx.stroke();
 
-  // Draw TERM (italic, large)
+  // TERM
   ctx.textAlign = 'center';
   const termMaxW = W - pad * 2 - 60;
   ctx.font = `300 italic 96px 'Georgia',serif`;
@@ -911,20 +84,23 @@ function drawWallpaper(entry) {
   const termLH = 112;
   const termStartY = centerY - 160 - ((termLines.length - 1) * termLH * 0.5);
 
-  termLines.forEach((tl, li) => {
+  termLines.forEach((tl) => {
     ctx.fillStyle = t.termColor;
     ctx.font = `300 italic 96px 'Georgia',serif`;
+  });
+  termLines.forEach((tl, li) => {
+    ctx.fillStyle = t.termColor;
     ctx.fillText(tl, cX, termStartY + li * termLH);
   });
 
-  // Small ornament dots after term
+  // Ornament dots
   const ornY = termStartY + termLines.length * termLH + 10;
   ctx.fillStyle = t.lineColor;
   [-24, 0, 24].forEach(dx => {
     ctx.beginPath(); ctx.arc(cX + dx, ornY, 3, 0, Math.PI * 2); ctx.fill();
   });
 
-  // DEFINITION (smaller, regular)
+  // DEFINITION
   ctx.font = `300 42px 'Georgia',serif`;
   ctx.fillStyle = t.defColor;
   const defMaxW = W - pad * 2 - 60;
@@ -935,18 +111,15 @@ function drawWallpaper(entry) {
     defLines = defLines.slice(0, maxDefLines);
     defLines[maxDefLines - 1] = defLines[maxDefLines - 1].replace(/\s+\S+$/, '') + '…';
   }
-
   const defStartY = ornY + 56;
-  defLines.forEach((dl, li) => {
-    ctx.fillText(dl, cX, defStartY + li * defLH);
-  });
+  defLines.forEach((dl, li) => { ctx.fillText(dl, cX, defStartY + li * defLH); });
 
   // Bottom rule
   const botY = defStartY + defLines.length * defLH + 60;
   ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1.5;
   ctx.beginPath(); ctx.moveTo(pad, botY); ctx.lineTo(W - pad, botY); ctx.stroke();
 
-  // Hour + index (top corners)
+  // Hour + index
   const now = new Date();
   const timeStr = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
   ctx.fillStyle = t.indexColor;
@@ -954,8 +127,7 @@ function drawWallpaper(entry) {
   ctx.textAlign = 'right';
   ctx.fillText(timeStr, W - 80, 120);
   ctx.textAlign = 'left';
-  const ei = entries.indexOf(entry);
-  if (ei >= 0) ctx.fillText(`${ei + 1}\u202F/\u202F${entries.length}`, 80, 120);
+  ctx.fillText(`${index + 1}\u202F/\u202F${total}`, 80, 120);
 
   // Watermark
   ctx.fillStyle = t.watermarkColor;
@@ -964,84 +136,25 @@ function drawWallpaper(entry) {
   ctx.fillText('WORDWALL', cX, H - 90);
 }
 
-function wrapText(ctx, text, maxW) {
-  const words = text.split(' ');
-  const lines = [];
-  let line = '';
-  for (const w of words) {
-    const test = line ? line + ' ' + w : w;
-    if (ctx.measureText(test).width > maxW && line) {
-      lines.push(line); line = w;
-    } else line = test;
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
-// ── THEME SWITCHER ─────────────────────────────────────────
-document.getElementById('theme-row').addEventListener('click', e => {
-  const sw = e.target.closest('.theme-swatch');
-  if (!sw) return;
-  document.querySelectorAll('.theme-swatch').forEach(s => s.classList.remove('sel'));
-  sw.classList.add('sel');
-  currentTheme = sw.dataset.theme;
-  if (currentEntry) drawWallpaper(currentEntry);
-});
-
-// ── DOWNLOAD ───────────────────────────────────────────────
-function downloadWallpaper() {
-  const canvas = document.getElementById('wc');
-  const a = document.createElement('a');
-  const slug = currentEntry ? currentEntry.term.slice(0,20).replace(/[\s\/\\]/g,'-') : 'wallpaper';
-  a.download = `wordwall-${slug}.png`;
-  a.href = canvas.toDataURL('image/png');
-  a.click();
-}
-
-function downloadJson() {
-  if (!entries.length) return;
-  const blob = new Blob([JSON.stringify(entries, null, 2)], { type:'application/json' });
-  const a = document.createElement('a');
-  a.download = 'words.json';
-  a.href = URL.createObjectURL(blob);
-  a.click();
-  toast('words.json downloaded!');
-}
-
-// ── HELPERS ────────────────────────────────────────────────
-function setStatus(msg) { document.getElementById('parse-status').textContent = msg; }
-function showProg(v) { document.getElementById('prog-bar').style.display = v ? 'block' : 'none'; }
-function setProg(p) { document.getElementById('prog-fill').style.width = p + '%'; }
-
-function toast(msg) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2000);
-}
-
-function copyThisUrl(el) {
-  navigator.clipboard.writeText(el.textContent.trim()).then(() => toast('URL copied!'));
-}
-
-// ── AUTO-LOAD words.json ────────────────────────────────────
-(async () => {
-  try {
-    const res = await fetch('./words.json');
-    if (!res.ok) return;
-    const data = await res.json();
-    if (Array.isArray(data) && data.length) {
-      entries = data;
-      renderEntries();
-      document.getElementById('step2').style.display = 'block';
-      document.getElementById('step4').style.display = 'block';
-      document.getElementById('dl-json-btn').disabled = false;
-      setStatus(`\u2713 Loaded ${entries.length} entries from words.json`);
-      document.getElementById('sb1').classList.add('done');
-      showWallpaperStep();
-    }
-  } catch (_) {}
-})();
+// Load words.json and render
+fetch('./words.json')
+  .then(r => r.json())
+  .then(entries => {
+    if (!entries || !entries.length) return;
+    const idx = new Date().getHours() % entries.length;
+    drawWallpaper(entries[idx], entries.length, idx);
+  })
+  .catch(err => {
+    // Fallback if no words.json
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#0d0d1a';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#e8c97e';
+    ctx.font = `300 italic 80px 'Georgia',serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText('words.json not found', canvas.width/2, canvas.height/2);
+  });
 </script>
 </body>
 </html>
