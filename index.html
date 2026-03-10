@@ -43,11 +43,11 @@ function draw(entry) {
   ctx.fillRect(0, 0, W, H);
 
   // ── Measure everything first so we can center the block ──
-  const termFont   = `300 italic 96px 'Georgia',serif`;
-  const defFont    = `300 40px 'Georgia',serif`;
-  const termLH     = 116;
-  const defLH      = 62;
-  const gap        = 60; // space between term block and def block
+  const termFont = `italic 96px 'Georgia',serif`;
+  const defFont  = `40px 'Georgia',serif`;
+  const termLH   = 130;
+  const defLH    = 66;
+  const gap      = 80;
 
   ctx.font = termFont;
   const termLines = wrapText(ctx, entry.term, maxW);
@@ -66,24 +66,27 @@ function draw(entry) {
   const defBlockH  = defLines.length * defLH;
   const totalH     = termBlockH + gap + defBlockH;
 
-  // Vertically center the whole block
-  const blockTop = (H - totalH) / 2;
+  // textBaseline = 'middle' — anchor each line at its midpoint
+  ctx.textAlign    = 'center';
+  ctx.textBaseline = 'middle';
+
+  // Center of the whole block
+  const blockMidY  = H / 2;
+  const blockTop   = blockMidY - totalH / 2;
 
   // ── Term ──
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'top';
   termLines.forEach((line, i) => {
-    ctx.font = termFont;
+    ctx.font      = termFont;
     ctx.fillStyle = '#e8c97e';
-    ctx.fillText(line, cX, blockTop + i * termLH);
+    ctx.fillText(line, cX, blockTop + i * termLH + termLH / 2);
   });
 
   // ── Definition ──
   const defTop = blockTop + termBlockH + gap;
   defLines.forEach((line, i) => {
-    ctx.font = defFont;
+    ctx.font      = defFont;
     ctx.fillStyle = '#b0a8d0';
-    ctx.fillText(line, cX, defTop + i * defLH);
+    ctx.fillText(line, cX, defTop + i * defLH + defLH / 2);
   });
 }
 
