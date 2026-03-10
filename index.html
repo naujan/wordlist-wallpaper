@@ -2,33 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=390px, initial-scale=1.0">
+<meta name="viewport" content="width=390, initial-scale=1.0">
 <title>Wallpaper</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html, body {
-    width: 390px;
-    height: 844px;
-    overflow: hidden;
-    background: #000;
-  }
-  canvas {
-    display: block;
-    width: 390px;
-    height: 844px;
-  }
+  * { margin:0; padding:0; }
+  html, body { width:390px; height:844px; overflow:hidden; background:#0d0d1a; }
+  canvas { display:block; width:390px; height:844px; }
 </style>
 </head>
 <body>
 <canvas id="c" width="1170" height="2532"></canvas>
 <script>
-const THEME = {
-  bg1:'#0d0d1a', bg2:'#1a1030', bg3:'#0a0a14',
-  termColor:'#e8c97e', defColor:'#b0a8d0',
-  lineColor:'rgba(232,201,126,0.22)', dotColor:'rgba(232,201,126,0.1)',
-  indexColor:'rgba(232,201,126,0.35)', watermarkColor:'rgba(255,255,255,0.04)'
-};
-
 function wrapText(ctx, text, maxW) {
   const words = text.split(' ');
   const lines = [];
@@ -42,118 +26,75 @@ function wrapText(ctx, text, maxW) {
   return lines;
 }
 
-function drawWallpaper(entry, total, index) {
+function draw(entry) {
   const canvas = document.getElementById('c');
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
-  const t = THEME;
+  const cX = W / 2;
+  const pad = 110;
+  const maxW = W - pad * 2;
 
-  // Background
-  const gr = ctx.createLinearGradient(0, 0, W * 0.4, H);
-  gr.addColorStop(0, t.bg1);
-  gr.addColorStop(0.55, t.bg2);
-  gr.addColorStop(1, t.bg3);
+  // ── Background ──
+  const gr = ctx.createLinearGradient(0, 0, 0, H);
+  gr.addColorStop(0,   '#0a0a14');
+  gr.addColorStop(0.5, '#110e20');
+  gr.addColorStop(1,   '#0d0a18');
   ctx.fillStyle = gr;
   ctx.fillRect(0, 0, W, H);
 
-  // Dot grid
-  ctx.fillStyle = t.dotColor;
-  for (let x = 72; x < W; x += 90) {
-    for (let y = 72; y < H; y += 90) {
-      ctx.beginPath(); ctx.arc(x, y, 1.8, 0, Math.PI * 2); ctx.fill();
+  // ── Measure everything first so we can center the block ──
+  const termFont   = `300 italic 96px 'Georgia',serif`;
+  const defFont    = `300 40px 'Georgia',serif`;
+  const termLH     = 116;
+  const defLH      = 62;
+  const gap        = 60; // space between term block and def block
+
+  ctx.font = termFont;
+  const termLines = wrapText(ctx, entry.term, maxW);
+
+  ctx.font = defFont;
+  const defLines = (() => {
+    let lines = wrapText(ctx, entry.def, maxW);
+    if (lines.length > 8) {
+      lines = lines.slice(0, 8);
+      lines[7] = lines[7].replace(/\s+\S+$/, '') + '…';
     }
-  }
+    return lines;
+  })();
 
-  // Vertical lines
-  ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1;
-  for (let x = 0; x < W; x += 180) {
-    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
-  }
+  const termBlockH = termLines.length * termLH;
+  const defBlockH  = defLines.length * defLH;
+  const totalH     = termBlockH + gap + defBlockH;
 
-  const pad = 100, cX = W / 2, centerY = H * 0.44;
+  // Vertically center the whole block
+  const blockTop = (H - totalH) / 2;
 
-  // Top rule
-  ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.moveTo(pad, centerY - 260); ctx.lineTo(W - pad, centerY - 260); ctx.stroke();
-
-  // TERM
+  // ── Term ──
   ctx.textAlign = 'center';
-  const termMaxW = W - pad * 2 - 60;
-  ctx.font = `300 italic 96px 'Georgia',serif`;
-  const termLines = wrapText(ctx, entry.term, termMaxW);
-  const termLH = 112;
-  const termStartY = centerY - 160 - ((termLines.length - 1) * termLH * 0.5);
-
-  termLines.forEach((tl) => {
-    ctx.fillStyle = t.termColor;
-    ctx.font = `300 italic 96px 'Georgia',serif`;
-  });
-  termLines.forEach((tl, li) => {
-    ctx.fillStyle = t.termColor;
-    ctx.fillText(tl, cX, termStartY + li * termLH);
+  ctx.textBaseline = 'top';
+  termLines.forEach((line, i) => {
+    ctx.font = termFont;
+    ctx.fillStyle = '#e8c97e';
+    ctx.fillText(line, cX, blockTop + i * termLH);
   });
 
-  // Ornament dots
-  const ornY = termStartY + termLines.length * termLH + 10;
-  ctx.fillStyle = t.lineColor;
-  [-24, 0, 24].forEach(dx => {
-    ctx.beginPath(); ctx.arc(cX + dx, ornY, 3, 0, Math.PI * 2); ctx.fill();
+  // ── Definition ──
+  const defTop = blockTop + termBlockH + gap;
+  defLines.forEach((line, i) => {
+    ctx.font = defFont;
+    ctx.fillStyle = '#b0a8d0';
+    ctx.fillText(line, cX, defTop + i * defLH);
   });
-
-  // DEFINITION
-  ctx.font = `300 42px 'Georgia',serif`;
-  ctx.fillStyle = t.defColor;
-  const defMaxW = W - pad * 2 - 60;
-  const defLH = 64;
-  let defLines = wrapText(ctx, entry.def, defMaxW);
-  const maxDefLines = 7;
-  if (defLines.length > maxDefLines) {
-    defLines = defLines.slice(0, maxDefLines);
-    defLines[maxDefLines - 1] = defLines[maxDefLines - 1].replace(/\s+\S+$/, '') + '…';
-  }
-  const defStartY = ornY + 56;
-  defLines.forEach((dl, li) => { ctx.fillText(dl, cX, defStartY + li * defLH); });
-
-  // Bottom rule
-  const botY = defStartY + defLines.length * defLH + 60;
-  ctx.strokeStyle = t.lineColor; ctx.lineWidth = 1.5;
-  ctx.beginPath(); ctx.moveTo(pad, botY); ctx.lineTo(W - pad, botY); ctx.stroke();
-
-  // Hour + index
-  const now = new Date();
-  const timeStr = `${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
-  ctx.fillStyle = t.indexColor;
-  ctx.font = `300 34px 'Georgia',serif`;
-  ctx.textAlign = 'right';
-  ctx.fillText(timeStr, W - 80, 120);
-  ctx.textAlign = 'left';
-  ctx.fillText(`${index + 1}\u202F/\u202F${total}`, 80, 120);
-
-  // Watermark
-  ctx.fillStyle = t.watermarkColor;
-  ctx.font = `300 28px 'Georgia',serif`;
-  ctx.textAlign = 'center';
-  ctx.fillText('WORDWALL', cX, H - 90);
 }
 
-// Load words.json and render
 fetch('./words.json')
   .then(r => r.json())
   .then(entries => {
-    if (!entries || !entries.length) return;
-    const idx = new Date().getHours() % entries.length;
-    drawWallpaper(entries[idx], entries.length, idx);
+    if (!entries || !entries.length) throw new Error('empty');
+    draw(entries[new Date().getHours() % entries.length]);
   })
-  .catch(err => {
-    // Fallback if no words.json
-    const canvas = document.getElementById('c');
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = '#0d0d1a';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#e8c97e';
-    ctx.font = `300 italic 80px 'Georgia',serif`;
-    ctx.textAlign = 'center';
-    ctx.fillText('words.json not found', canvas.width/2, canvas.height/2);
+  .catch(() => {
+    draw({ term: 'words.json', def: 'File not found in repo root.' });
   });
 </script>
 </body>
